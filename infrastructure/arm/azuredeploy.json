@@ -31,7 +31,7 @@
     },
     "repoURL": {
       "type": "string",
-      "defaultValue": "https://github.com/Azure-Samples/eventgrid-viewer-blazor",
+      "defaultValue": "https://github.com/Azure-Samples/eventgrid-viewer-blazor.git",
       "metadata": {
         "description": "The URL for the GitHub repository that contains the project to deploy."
       }
