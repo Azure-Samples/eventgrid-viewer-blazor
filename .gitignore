@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/master/VisualStudio.gitignore
 
+PublishProfiles
+examples/terraform-no-auth/.terraform
+examples/terraform-auth/.terraform
+
 # User-specific files
 *.rsuser
 *.suo
@@ -23,8 +27,8 @@ mono_crash.*
 [Rr]eleases/
 x64/
 x86/
-[Aa][Rr][Mm]/
-[Aa][Rr][Mm]64/
+# [Aa][Rr][Mm]/
+# [Aa][Rr][Mm]64/
 bld/
 [Bb]in/
 [Oo]bj/
