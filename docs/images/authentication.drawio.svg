@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="340px" height="247px" viewBox="-0.5 -0.5 340 247" content="&lt;mxfile host=&quot;&quot; modified=&quot;2020-06-30T14:34:14.305Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.46.1 Chrome/78.0.3904.130 Electron/7.3.1 Safari/537.36&quot; etag=&quot;p4DC-1wmVuNtDqGgLFHV&quot; version=&quot;13.1.3&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;zVfbbqMwEP2avCIuIdDHkKTdlVpppUq7j5GDHfDWMMiYXPr1OwYDIaS7VZtumweCD2N7Zs6ZMUy8RXa4k6RIH4AyMXFteph4y4nr3gQeXjVwNIAbNEAiOW0gpwce+TMzoG3QilNWDgwVgFC8GIIx5DmL1QAjUsJ+aLYFMdy1IAkbAY8xEWP0F6cqbdCwjULj3xhP0nZnZ3bTPMlIa2wiKVNCYX8CeauJt5AAqrnLDgsmdO7avDTzbl942jkmWa5eM8EQsSOiMrE9kBzdpwh+p7gIV0fjqTq24ZOyaLK65Qe09KJUZQKHDt4WwHNVp9ePJv4SESJ4kiMg2BbnRDyrkxttIVeGWcft8SXPEnRX8A1eszImDP+NT2vjEWelVe4SnCTIhokfUCIGeg/ZJD3aMak48nV/9jzjlOooOoO5ca57UK8YkfgpkVDldAECZB21t61/xvMT3K5/iJtU4srs8CIdTkcyFgeDjCmJCbbNBL9VuCkM1/Ob8b6XmetaYQOmJxrzzERipJ10a/fs64w2ArgshtlIDKsdOn6ni9KdCZ3YjcS7RN/95GzPcGRjyp4xF9cRSYz74apvk8m8KNaPTO54PBTI2+g811bn2kviUlBcUNYGlILsOvKYzobycMKxPHx7LA7/CuK4GTHMKDZFMwSpUkggJ2LVo1Gdc03+Uie0t7kHnapaCr+ZUkdDMKkUDIXy7mrUPv492RgSVDI2VqaDKyITZqzCy5RIJojiu+HqlxJcT51LSY4nBqYC+pV/aKBnOph6A6Y93z8jq1mxp65z7VVsBqNSj/SxyMZ1XHvKZN0JSkNLd2rpRFNSph3HJ9yVSsITG1AzW81vNWVciBPc2RCHuW+puK62zouuKUWolOA5utC+BdiXOg0GU+hYs0OiX1Ys2G6xgViUNX1ExHSdQc6VdveTj4fA8a0w/HcLmFrhdNwFpv77u0A40s38uZLYfO358kscAbGuyfWSS9wZ5PH9x8AHtG2vPaz/Q9tuXyhOGPuoEs8hZ1+tiitsaWV9Hfcd1w7cKPx0dQRn6nBnY3W4gTW7yjsfDvuPi+bc6L/QvNUf&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <image x="60.5" y="80.5" width="22.8" height="30" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI3Ni4wMzIiIGhlaWdodD0iMTAwIj48cGF0aCBkPSJNMjguMjg0IDgxLjg1YTUuMDcgNS4wNyAwIDAgMSAwLTcuMTcyTDM5LjQxMiA2My41NVY1My42bDE2LjQzMy0xNi40MzRhMTAuODMgMTAuODMgMCAwIDAgMC0xNS4zMTRsLTE4LjY4LTE4LjY4YTEwLjgzMSAxMC44MzEgMCAwIDAtMTUuMzE2IDBMMy4xNzIgMjEuODUyYTEwLjgyOCAxMC44MjggMCAwIDAgMCAxNS4zMTRMMjAuOTA4IDU0Ljl2MS41bC01LjA1IDUuMDUgNS4wMDUgNS4wMDUtNS4wMDUgNSA1LjAwNSA1LjAwNS01LjAwNSA1IDUuMDUgNS4wNXYuMDYzbDguNiA4LjYgNi4wNS02LjA1ek0yMy4zNiAxMy44MzRhNi4xNDcgNi4xNDcgMCAxIDEgNi4xNDcgNi4xNDcgNi4xNDggNi4xNDggMCAwIDEtNi4xNDctNi4xNDd6IiBmaWxsPSIjZmNkMTE2Ii8+PHBhdGggZD0iTTEyLjM2NCAyNS45MmgzNS40ODJ2NS4xSDEyLjM2NHptMCA4LjI5N2gzNS40ODJ2NS4xSDEyLjM2NHoiIG9wYWNpdHk9Ii41IiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTU0LjMgMTAwYTMuOTc4IDMuOTc4IDAgMCAxLTIuODM1LTEuMTc1TDMzLjczNSA4MS4xYTQuMDA4IDQuMDA4IDAgMCAxIDAtNS42N0w1MS40NiA1Ny43YTQuMDA1IDQuMDA1IDAgMCAxIDUuNjcgMGwxNy43MjQgMTcuNzNhNC4wMDYgNC4wMDYgMCAwIDEgMCA1LjY3Mkw1Ny4xMyA5OC44MjVBMy45NzggMy45NzggMCAwIDEgNTQuMyAxMDAiIGZpbGw9IiM1OWI0ZDkiLz48ZyBmaWxsPSIjZmZmIj48cGF0aCBkPSJNNjYuMTMyIDc0Ljg2N2EzLjM5MyAzLjM5MyAwIDAgMC0yLjgzOSA1LjI2Mkw1Ni41NiA4Ni44NmEzLjk5MSAzLjk5MSAwIDAgMC0uNTctLjMyNFY2OS4zNmEzLjQgMy40IDAgMSAwLTMuMzg4IDB2MTcuMTc2YTMuOTI5IDMuOTI5IDAgMCAwLS41NS4zMDdsLTYuNzQtNi43NGEzLjQ5MyAzLjQ5MyAwIDEgMC0xLjc0NCAxLjM2MWw3LjA4NSA3LjA4NmEzLjk1NyAzLjk1NyAwIDEgMCA3LjI5Mi4wMjhsNy4xMDYtNy4xMDVhMy4zNTYgMy4zNTYgMCAwIDAgMS4wNzkuMTkxIDMuNCAzLjQgMCAwIDAgMC02Ljh6Ii8+PHBhdGggZD0iTTUzLjQ4NCA2Ny4wOTJsMS41NS0xLjU1MiAxMi43MTQgMTIuNy0xLjU1MiAxLjU1eiIgb3BhY2l0eT0iLjUiLz48cGF0aCBkPSJNNDAuODYgNzguMjYyTDUzLjU3IDY1LjU1bDEuNTUyIDEuNTVMNDIuNCA3OS44MTN6IiBvcGFjaXR5PSIuNSIvPjwvZz48cGF0aCBkPSJNNTYuNjEyIDkwLjFhMi4zNTYgMi4zNTYgMCAxIDEtMi4zNTYtMi4zNTUgMi4zNTUgMi4zNTUgMCAwIDEgMi4zNTYgMi4zNTVtLS40MjctMjMuNjdhMS44OSAxLjg5IDAgMSAxLTEuODktMS44OSAxLjg4OSAxLjg4OSAwIDAgMSAxLjg5IDEuODlNNDQuMzUyIDc4LjI2NWExLjg5IDEuODkgMCAxIDEtMS44OS0xLjg5IDEuODkxIDEuODkxIDAgMCAxIDEuODkgMS44OW0yMy42NyAwYTEuODkxIDEuODkxIDAgMSAxLTEuODkxLTEuODkgMS44OTEgMS44OTEgMCAwIDEgMS44OTEgMS44OSIgZmlsbD0iI2I4ZDQzMiIvPjxwYXRoIGQ9Ik01Ny4xMyA1Ny43YTQgNCAwIDAgMC01LjY2OSAwTDMzLjczNSA3NS40M2E0LjAwOCA0LjAwOCAwIDAgMCAwIDUuNjdMNDMuNzcgOTEuMTM1bDE4Ljg4LTI3LjkxM3oiIG9wYWNpdHk9Ii4xIiBmaWxsPSIjZmZmIi8+PHBhdGggZD0iTTM0Ljc4OCA2OC4xMzd2LTEyLjkybC0zLjg2NCAxLjkwM1Y3MnoiIG9wYWNpdHk9Ii40IiBmaWxsPSIjZmY4YzAwIi8+PC9zdmc+"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe flex-start; width: 1px; height: 1px; padding-top: 96px; margin-left: 86px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: left; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                Managed Identity
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="86" y="100" fill="#000000" font-family="Helvetica" font-size="12px">
+                    Mana...
+                </text>
+            </switch>
+        </g>
+        <image x="10.5" y="30.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI0OS45OSI+PHBhdGggZD0iTTQwLjE5MyA0NC44NGEyNC44OTggMjQuODk4IDAgMCAxLTE1LjE2NyA1LjE1MWMtNy41MiAwLTE0Ljk1Ni0zLjM3Ni0xOS44Ny05LjgwMy04LjM5Ni0xMC45NjItNi4zMjQtMjYuNjQgNC42NTgtMzUuMDRDMTQuMzQzIDEuNjYzIDE5LjY4NiAwIDI0Ljk4IDBjNy41MiAwIDE0Ljk1OCAzLjM3NiAxOS44NyA5LjgxIDguMzk4IDEwLjk2IDYuMzA1IDI2LjY0LTQuNjU2IDM1LjAzIiBmaWxsPSIjNTliNGQ5Ii8+PHBhdGggZD0iTTM1LjYgMjkuMzc4YTUuMzg1IDUuMzg1IDAgMCAwIDcuNTQxIDEuMDA0Yy4xMjMtLjA5NC4yMTgtLjIwOC4zMy0uMzFsNS4wMjUgMy40NmMuMjgtLjcyMy40NzItMS40MTcuNjctMi4xNDJhMTMwLjg1NyAxMzAuODU3IDAgMCAxLTQuMjktMy4zNTZjLjY0LTEuNjguNDM3LTMuNjQtLjczLTUuMTdhNS4zNiA1LjM2IDAgMCAwLTYuOTM2LTEuMzc3IDIyNC4zMTcgMjI0LjMxNyAwIDAgMS04LjI5My03LjgzM2M5LjE2NS00LjkzIDE1LjY3Ni00LjIwNyAxNS42NzYtNC4yMDctMS4wODctMS4zODYtMi4zMDUtMi42LTMuNjA2LTMuNjk3LTMuODY1LS41OTctOS44Ny0uNTMtMTYuNzMgMy4xMmwtLjAwMi0uMDAzaC0uMDAxYTIwMC4zMjIgMjAwLjMyMiAwIDAgMS02Ljk4My03LjcxMkEyMy4yNjQgMjMuMjY0IDAgMCAwIDEzLjk2IDIuNWMxLjc1IDIuODYyIDQuMTAyIDUuNzUgNi43NTQgOC41NjVsLjAxNy4wMTdhNDYuMjkzIDQ2LjI5MyAwIDAgMC02Ljk0NCA2LjAxNWMtLjMuMzEtLjU3LjYyLS44NDIuOTNhNy41NDYgNy41NDYgMCAwIDAtNC4xMTcuMjgyQzYuNTY0IDEzLjQyNSA2Ljc0NiA5LjUgNy4xMDQgNy40NzhjLS45ODMgMS4wMy0xLjkgMi4xMTMtMi42OTIgMy4yNjctLjU5IDIuNDE1LS43NiA1Ljg5OC45ODUgMTAuMDk1YTcuNTM4IDcuNTM4IDAgMCAwLS4wMDUgOS4xNTNjLjE3Ni4yMy4zNjQuNDQyLjU2LjY0NWEzNy44NyAzNy44NyAwIDAgMC0xLjQ2IDguNzYxYy4yMzcuMzIyLjIzNy41ODIuNDcyLjg5NiAxLjIgMS41MzggMi43MDUgMi44MzQgNC4xNiA0LjAwOC0uMTgtMi43NS4wMTQtNi44MDYgMS43MTQtMTEuMzcyYTcuNTA3IDcuNTA3IDAgMCAwIDMuNDgzLS41NjYgNjQuNzMgNjQuNzMgMCAwIDAgMi4wMjUgMS43MTEgNDEuNjcyIDQxLjY3MiAwIDAgMCA3LjI4NSA0LjY0MyA0Ljk3NCA0Ljk3NCAwIDAgMCAuOTY4IDMuNTE4IDQuOTk4IDQuOTk4IDAgMCAwIDYuOTgzLjkxOSA0LjkxOCA0LjkxOCAwIDAgMCAxLjEwOC0xLjIxNmMzLjg5Ljg2NiA3LjI4NyAxLjAyIDkuODA2IDEuMDIuMzg2IDAgMi4xNzctMi40MzYgMy4yMDMtMy45NDYtMS41MzQuMzItNi4wODMuOTQ2LTEyLjMtLjg0YTQuOTUyIDQuOTUyIDAgMCAwLS44OTgtMS45OGMtMS41OC0yLjA3LTQuNDY2LTIuNTE4LTYuNjE4LTEuMTMzYTQ2Ljg1MyA0Ni44NTMgMCAwIDEtNi43NTgtNC40OSA0Ni40MjIgNDYuNDIyIDAgMCAxLTEuMzU5LTEuMTE4IDcuNTc4IDcuNTc4IDAgMCAwIC4zMTgtNy41NWwuODctLjg1N2MyLjMxLTIuMTYgNC40ODUtMy44ODcgNi41Mi01LjI3NC0uMDgyLS4wNzYtLjE1Ni0uMTU2LS4yMzYtLjIzM2wuMjQuMjI3LS4wMDIuMDAxYzMuMTIgMi44ODYgNi40MyA1LjYyIDkuNTY0IDguMDY1LS44MyAxLjc1OC0uNyAzLjkuNTYyIDUuNTQ3eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 28px; margin-left: 36px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                EventGrid
+                                <br/>
+                                Viewer Blazor
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="36" y="28" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    EventGri...
+                </text>
+            </switch>
+        </g>
+        <path d="M 294.3 76 L 294.3 201 L 67.37 201" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 62.12 201 L 69.12 197.5 L 67.37 201 L 69.12 204.5 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="266.88" y="31" width="54.84" height="45" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 270.44 62.64 L 318.16 62.64 L 318.16 34.52 L 270.44 34.52 Z M 269.61 66.16 C 268.38 66.16 266.88 64.97 266.88 63.39 L 266.88 33.82 C 266.88 32.31 268.23 31 269.58 31 L 318.99 31 C 320.44 31 321.72 32.38 321.72 33.75 L 321.72 63.36 C 321.72 64.64 320.68 66.16 318.89 66.16 L 300.57 66.16 C 300.27 67.2 299.99 68.25 299.98 69.29 C 299.97 71.03 301 71.7 302.53 72.09 C 304.42 72.51 306.42 72.51 308.42 72.55 C 309.24 72.55 310.18 73.24 310.18 74.34 C 310.18 75.23 309.35 76 308.6 76 L 279.95 76 C 279.15 76 278.28 75.26 278.28 74.37 C 278.28 73.36 279.01 72.55 279.98 72.55 C 282.32 72.49 285.35 72.53 287.1 71.72 C 287.89 71.36 288.56 70.78 288.6 69.51 C 288.66 68.41 288.33 67.27 288.04 66.16 Z" fill="#1ba1e2" stroke="#006eaf" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 83px; margin-left: 294px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                Browser
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="294" y="95" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Browser
+                </text>
+            </switch>
+        </g>
+        <image x="10.5" y="175.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHBhdGggZmlsbD0iIzU5YjRkOSIgZD0iTTI1IDUwYy0xLjIzMiAwLTIuMzkyLS40OC0zLjI2LTEuMzUyTDEuMzUgMjguMjZhNC42NCA0LjY0IDAgMCAxIDAtNi41MjFMMjEuNzQgMS4zNTJhNC41OCA0LjU4IDAgMCAxIDYuNTIyIDBMNDguNjQ4IDIxLjc0QzQ5LjUyIDIyLjYwOCA1MCAyMy43NjcgNTAgMjVzLS40OCAyLjM5Mi0xLjM1MyAzLjI2M0wyOC4yNjIgNDguNjVhNC41OCA0LjU4IDAgMCAxLTMuMjYxIDEuMzUyIi8+PGcgZmlsbD0iI2ZmZiI+PHBhdGggZD0iTTM4LjYxNCAyMS4wOTNhMy45MSAzLjkxIDAgMCAwLTMuOTEgMy45MDkgMy44OCAzLjg4IDAgMCAwIC42NDUgMi4xNDNsLTcuNzQ0IDcuNzQ0YTQuNTUgNC41NSAwIDAgMC0uNjU2LS4zNzNWMTQuNzZjMS4xNjctLjY3NiAxLjk2LTEuOTI0IDEuOTYtMy4zN0EzLjkxIDMuOTEgMCAwIDAgMjUgNy40OGEzLjkxIDMuOTEgMCAwIDAtMy45MDggMy45MDljMCAxLjQ0Ni43OTQgMi42OTQgMS45NiAzLjM3djE5Ljc1NmE0LjQ4IDQuNDggMCAwIDAtLjYzMi4zNTNsLTcuNzUzLTcuNzUzYTMuODggMy44OCAwIDAgMCAuNjI4LTIuMTEzIDMuOTEgMy45MSAwIDAgMC0zLjkwOC0zLjkwOSAzLjkxIDMuOTEgMCAwIDAtMy45MSAzLjkwOSAzLjkxIDMuOTEgMCAwIDAgMy45MSAzLjkwOSAzLjg4IDMuODggMCAwIDAgMS4yNzQtLjIzbDguMTUgOC4xNWMtLjIzNC41NDgtLjM2NCAxLjE1LS4zNjQgMS43ODMgMCAyLjUxMyAyLjAzOCA0LjU1IDQuNTUgNC41NWE0LjU1IDQuNTUgMCAwIDAgNC41NTEtNC41NTFjMC0uNjItLjEyNi0xLjIxMi0uMzUtMS43NWw4LjE3My04LjE3MmMuMzkyLjEzMi44MDQuMjIgMS4yNC4yMmEzLjkxIDMuOTEgMCAwIDAgMy45MDgtMy45MDkgMy45MSAzLjkxIDAgMCAwLTMuOTA2LTMuOTA5eiIvPjxwYXRoIG9wYWNpdHk9Ii41IiBkPSJNNDAuNDcgMjQuOTgzbC0xLjc4NCAxLjc4NEwyNC4wNjUgMTIuMTVsMS43ODQtMS43ODR6Ii8+PHBhdGggb3BhY2l0eT0iLjUiIGQ9Ik0yNC4xNjYgMTAuMzc3bDEuNzg1IDEuNzg1LTE0LjYyIDE0LjYyLTEuNzg1LTEuNzg1eiIvPjwvZz48cGF0aCBkPSJNMjcuNjY1IDM4LjYxNGEyLjcxIDIuNzEgMCAwIDEtMi43MSAyLjcwOSAyLjcxIDIuNzEgMCAwIDEtMi43MDktMi43MDkgMi43MSAyLjcxIDAgMCAxIDIuNzA5LTIuNzA5IDIuNzEgMi43MSAwIDAgMSAyLjcxIDIuNzA5bS0uNDktMjcuMjI0YzAgMS4yLS45NzMgMi4xNzQtMi4xNzQgMi4xNzRzLTIuMTc0LS45NzMtMi4xNzQtMi4xNzRTMjMuOCA5LjIxNSAyNSA5LjIxNXMyLjE3NC45NzMgMi4xNzQgMi4xNzRNMTMuNTYzIDI1YzAgMS4yLS45NzUgMi4xNzQtMi4xNzQgMi4xNzRTOS4yMTUgMjYuMjAyIDkuMjE1IDI1cy45NzMtMi4xNzQgMi4xNzQtMi4xNzQgMi4xNzQuOTczIDIuMTc0IDIuMTc0bTI3LjIyNSAwYzAgMS4yLS45NzUgMi4xNzQtMi4xNzUgMi4xNzRTMzYuNDQgMjYuMjAyIDM2LjQ0IDI1cy45NzQtMi4xNzQgMi4xNzQtMi4xNzRTNDAuNzkgMjMuOCA0MC43OSAyNSIgZmlsbD0iI2I4ZDQzMiIvPjxwYXRoIG9wYWNpdHk9Ii4xIiBmaWxsPSIjZmZmIiBkPSJNMjguMjYyIDEuMzUyQTQuNTggNC41OCAwIDAgMCAyNS4wMDEgMGMtMS4yMyAwLTIuMzkuNDgtMy4yNiAxLjM1MkwxLjM1MiAyMS43NEMuNDkyIDIyLjU5OCAwIDIzLjc4NiAwIDI1cy40OTIgMi40MDMgMS4zNTIgMy4yNmwxMS41NDMgMTEuNTQ0TDM0LjYgNy43bC02LjM0OC02LjM0N3oiLz48L3N2Zz4="/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 233px; margin-left: 36px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                Azure AD
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="36" y="245" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Azure AD
+                </text>
+            </switch>
+        </g>
+        <rect x="311" y="106" width="27.6" height="30" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 324.8 120.93 C 321.18 120.93 317.96 117.91 317.96 113.28 C 317.96 109.68 320.69 106 324.67 106 C 328.57 106 331.42 109.56 331.42 113.45 C 331.42 117.95 328.06 120.93 324.8 120.93 Z M 311 136 C 311.31 132.69 311.73 128.17 312.53 125.88 C 312.89 124.84 313.42 124.09 314.28 123.47 C 314.84 123.06 316.82 121.97 317.19 121.79 C 317.82 121.46 318.48 121.28 319.04 121.79 C 322.4 124.76 327.05 124.67 330.45 121.8 C 330.85 121.39 331.47 121.5 331.89 121.66 C 332.54 121.91 334.63 123.14 335.02 123.39 C 336.18 124.15 336.8 125.16 337.26 127.05 C 337.85 129.61 338.2 132.87 338.6 136 Z" fill="#2072b8" stroke="none" pointer-events="all"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>
