@@ -1,0 +1,47 @@
+parameters:
+  - name: 'showFiles'
+    default: false
+    type: boolean
+
+steps:
+- task: UseDotNet@2
+  displayName: 'Use .NET Core sdk 3.1'
+  inputs:
+    packageType: sdk
+    version: 3.1.x
+
+# *** DEBUG ***
+- script: 'find .'
+  condition: eq('${{ parameters.showFiles }}', true)
+  displayName: 'List all files before build.'
+  workingDirectory: $(Build.SourcesDirectory)
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet restore'
+  inputs:
+    command: 'restore'
+    projects: '**/*$(blazorServerAppProjectName)'
+    workingDirectory: $(workingDirectory)
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build blazor server app' # If name changes here, reflect changes on warning gate filter below
+  inputs:
+    command: build
+    projects: '**/*$(blazorServerAppProjectName)'
+    arguments: '--configuration $(BuildConfiguration)'
+    workingDirectory: $(workingDirectory)
+    modifyOutputPath: true
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet build test projects' # If name changes here, reflect changes on warning gate filter below
+  inputs:
+    command: build  
+    arguments: '--configuration $(BuildConfiguration)'
+    workingDirectory: $(testWorkingDirectory)
+
+- task: DotNetCoreCLI@2
+  displayName: 'Run unit tests - $(BuildConfiguration)'
+  inputs:
+    command: 'test'
+    arguments: '--no-build --configuration $(BuildConfiguration)'
+    workingDirectory: $(testWorkingDirectory)     

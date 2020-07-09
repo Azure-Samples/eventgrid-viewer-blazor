@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="723px" height="241px" viewBox="-0.5 -0.5 723 241" content="&lt;mxfile host=&quot;&quot; modified=&quot;2020-06-30T14:23:32.144Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.46.1 Chrome/78.0.3904.130 Electron/7.3.1 Safari/537.36&quot; etag=&quot;ZAkXS-FrZjJye-Ch0P9b&quot; version=&quot;13.1.3&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;zVjJcqMwEP0aH8fFapOjt2QOmapUPDXLySWDDJoIRAlh43z9tJAAA04mk8UhBwc9Wqj1up+k1shexMUNR2n0jQWYjiwjKEb2cmRZnmnCrwSOCphObQWEnAQKMhtgTR6xBg2N5iTAWctQMEYFSdugz5IE+6KFIc7ZoW22Y7Q9aopC3APWPqJ99CcJRKSnZU0b/CsmYVSNbE6u1JsYVcZ6JlmEAnY4gezVyF5wxoR6iosFppK7ihfV7/qJt7VjHCfiJR3ku9IPcawmhwOYq24yLiIWsgTRVYPOOcuTAMsvGNBqbG4ZSwE0AfyDhTjqwKFcMIAiEVP9dscSsWCU8XJE2yj/AKdoi+kc+Q9hOcSJya78AxPlrvTxyRlrKGM597WVTi+BeIgrK6+mG9IUsxgLfgQbjikSZN/+PNIJE9Z2DafwoGk9T7Eee49orj+6JiGwdd9jHmWpytYdKSS9p5SljCSi9MKdj9wlIIjCZwDwYeIYaJqTuEzbkl1NvWk1+JLEIfhKyVZ6nPkIw3/tyjjbhy/j/6nQ6UliLnDxfGT6lOsObiXvY5Wbun1oNOZoKDqRV4W9JUhOL0irPbh9I9cja0JhpPmWw1Mon34QfADGLQMIewQmBhDHWZpu1pjviY+ztwez7HrHMiIIa7km40tgHbztGAgp/PrtTM9oy4Rg8fskhzNpJ4fpub3kcM8kh/sOyWFeDWmRBML48ReAX4yxAVuORn7Lkcau51TAstBjq9bxtHWHOQEaZEyXH7rwTvoL7/RC6+7kOUkb31lK/GwI0i292ki3NsqpQSzG047c7MvJrc6ji8qtlhWoyrU7qjKs16jq4secaV9tzoXUNj2vNoC04Nb5NvN5uWFk5Xl9ZM/6W+sYxkEpgV8su5f1wKA0Oghx2tXi9gmbYV25DHAzNDuyvTJfI9sPk6d5pgx5626ou97JvG8SxLrqHKXtTuSVC7pXJ/i1Gy87HPXrm1ItUuQ7Dsc/mTBdmc8ecw66Mu6x4mcQG7GUt13Yg1B4Z/ut43mJ067XC+hcXpngfqFTBgJzHW8VnPpGQzIRoCyqZX8SwUxw9oBb3E1Ws2vJKaH0BDe3yMTWa0qSuvjoViWqVmG5oCQBF6obIuNcGsFkUjnXuAjlRdaY7XZQYY0DrAot6gebmCVESHc/O2NMd+x5/94WnLHn9BPHcf87caDZ3FOphaO57LNXfwE=&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 501 105 L 583.92 105 L 583.92 72.5 L 660.51 72.5" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 665.76 72.5 L 658.76 76 L 660.51 72.5 L 658.76 69 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <image x="460.5" y="84.5" width="40" height="40" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHBhdGggZD0iTTIwLjQ1NSAzNi4zNjNsMi44MjMtNi44MThoNi4yNjdhNC41NTEgNC41NTEgMCAwIDAgNC41NDYtNC41NDQgNC41NTEgNC41NTEgMCAwIDAtNC41NDYtNC41NDZIOS4xTDIwLjQ1NSA5LjF2NC41NDdoOS4xQzM1LjgyMiAxMy42MzcgNDAuOSAxOC43MjUgNDAuOSAyNWMwIDYuMTAyLTQuODI1IDExLjA0NC0xMC44NjMgMTEuMzE0bDkuMjEgOS4yMUM0NS43NDUgNDEuMDA3IDUwIDMzLjUwNCA1MCAyNSA1MCAxMS4xOTQgMzguODA2IDAgMjUgMFMwIDExLjE5NCAwIDI1czExLjE5NCAyNSAyNSAyNWMyLjczNyAwIDUuMzYtLjQ1NSA3LjgyNS0xLjI2NXoiIGZpbGw9IiM1OWI0ZDkiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg=="/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 132px; margin-left: 481px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                SignalR
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="481" y="144" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    SignalR
+                </text>
+            </switch>
+        </g>
+        <image x="410.5" y="49.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI0OS45OSI+PHBhdGggZD0iTTQwLjE5MyA0NC44NGEyNC44OTggMjQuODk4IDAgMCAxLTE1LjE2NyA1LjE1MWMtNy41MiAwLTE0Ljk1Ni0zLjM3Ni0xOS44Ny05LjgwMy04LjM5Ni0xMC45NjItNi4zMjQtMjYuNjQgNC42NTgtMzUuMDRDMTQuMzQzIDEuNjYzIDE5LjY4NiAwIDI0Ljk4IDBjNy41MiAwIDE0Ljk1OCAzLjM3NiAxOS44NyA5LjgxIDguMzk4IDEwLjk2IDYuMzA1IDI2LjY0LTQuNjU2IDM1LjAzIiBmaWxsPSIjNTliNGQ5Ii8+PHBhdGggZD0iTTM1LjYgMjkuMzc4YTUuMzg1IDUuMzg1IDAgMCAwIDcuNTQxIDEuMDA0Yy4xMjMtLjA5NC4yMTgtLjIwOC4zMy0uMzFsNS4wMjUgMy40NmMuMjgtLjcyMy40NzItMS40MTcuNjctMi4xNDJhMTMwLjg1NyAxMzAuODU3IDAgMCAxLTQuMjktMy4zNTZjLjY0LTEuNjguNDM3LTMuNjQtLjczLTUuMTdhNS4zNiA1LjM2IDAgMCAwLTYuOTM2LTEuMzc3IDIyNC4zMTcgMjI0LjMxNyAwIDAgMS04LjI5My03LjgzM2M5LjE2NS00LjkzIDE1LjY3Ni00LjIwNyAxNS42NzYtNC4yMDctMS4wODctMS4zODYtMi4zMDUtMi42LTMuNjA2LTMuNjk3LTMuODY1LS41OTctOS44Ny0uNTMtMTYuNzMgMy4xMmwtLjAwMi0uMDAzaC0uMDAxYTIwMC4zMjIgMjAwLjMyMiAwIDAgMS02Ljk4My03LjcxMkEyMy4yNjQgMjMuMjY0IDAgMCAwIDEzLjk2IDIuNWMxLjc1IDIuODYyIDQuMTAyIDUuNzUgNi43NTQgOC41NjVsLjAxNy4wMTdhNDYuMjkzIDQ2LjI5MyAwIDAgMC02Ljk0NCA2LjAxNWMtLjMuMzEtLjU3LjYyLS44NDIuOTNhNy41NDYgNy41NDYgMCAwIDAtNC4xMTcuMjgyQzYuNTY0IDEzLjQyNSA2Ljc0NiA5LjUgNy4xMDQgNy40NzhjLS45ODMgMS4wMy0xLjkgMi4xMTMtMi42OTIgMy4yNjctLjU5IDIuNDE1LS43NiA1Ljg5OC45ODUgMTAuMDk1YTcuNTM4IDcuNTM4IDAgMCAwLS4wMDUgOS4xNTNjLjE3Ni4yMy4zNjQuNDQyLjU2LjY0NWEzNy44NyAzNy44NyAwIDAgMC0xLjQ2IDguNzYxYy4yMzcuMzIyLjIzNy41ODIuNDcyLjg5NiAxLjIgMS41MzggMi43MDUgMi44MzQgNC4xNiA0LjAwOC0uMTgtMi43NS4wMTQtNi44MDYgMS43MTQtMTEuMzcyYTcuNTA3IDcuNTA3IDAgMCAwIDMuNDgzLS41NjYgNjQuNzMgNjQuNzMgMCAwIDAgMi4wMjUgMS43MTEgNDEuNjcyIDQxLjY3MiAwIDAgMCA3LjI4NSA0LjY0MyA0Ljk3NCA0Ljk3NCAwIDAgMCAuOTY4IDMuNTE4IDQuOTk4IDQuOTk4IDAgMCAwIDYuOTgzLjkxOSA0LjkxOCA0LjkxOCAwIDAgMCAxLjEwOC0xLjIxNmMzLjg5Ljg2NiA3LjI4NyAxLjAyIDkuODA2IDEuMDIuMzg2IDAgMi4xNzctMi40MzYgMy4yMDMtMy45NDYtMS41MzQuMzItNi4wODMuOTQ2LTEyLjMtLjg0YTQuOTUyIDQuOTUyIDAgMCAwLS44OTgtMS45OGMtMS41OC0yLjA3LTQuNDY2LTIuNTE4LTYuNjE4LTEuMTMzYTQ2Ljg1MyA0Ni44NTMgMCAwIDEtNi43NTgtNC40OSA0Ni40MjIgNDYuNDIyIDAgMCAxLTEuMzU5LTEuMTE4IDcuNTc4IDcuNTc4IDAgMCAwIC4zMTgtNy41NWwuODctLjg1N2MyLjMxLTIuMTYgNC40ODUtMy44ODcgNi41Mi01LjI3NC0uMDgyLS4wNzYtLjE1Ni0uMTU2LS4yMzYtLjIzM2wuMjQuMjI3LS4wMDIuMDAxYzMuMTIgMi44ODYgNi40MyA1LjYyIDkuNTY0IDguMDY1LS44MyAxLjc1OC0uNyAzLjkuNTYyIDUuNTQ3eiIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg=="/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-end; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 47px; margin-left: 436px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                EventGrid
+                                <br/>
+                                Viewer Blazor
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="436" y="47" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    EventGri...
+                </text>
+            </switch>
+        </g>
+        <path d="M 71 25 L 174 25 L 174 79.17 L 269.28 79.2" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 274.53 79.2 L 267.53 82.7 L 269.28 79.2 L 267.53 75.7 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <image x="20.5" y="-0.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OS45IiBoZWlnaHQ9IjUwIj48cGF0aCBkPSJNMy4wNjcgMTNoMjIuNjY3djRIMy4wNjd6bTUgMTBoMjUuNjY3djRIOC4wNjd6bS01IDEwaDIyLjY2N3Y0SDMuMDY3eiIgZmlsbD0iIzAwNzJjNiIvPjxnIGZpbGw9IiNiOGQ0MzIiPjxjaXJjbGUgY3g9IjMuOSIgY3k9IjM1IiByPSIzLjkiLz48Y2lyY2xlIHRyYW5zZm9ybT0ibWF0cml4KC43MDcwOTQgLS43MDcxMTkgLjcwNzExOSAuNzA3MDk0IC05LjUzNTE2NSA3LjIyMjA2KSIgY3g9IjQiIGN5PSIxNSIgcj0iMy45Ii8+PC9nPjxjaXJjbGUgdHJhbnNmb3JtPSJtYXRyaXgoLjcwNzA5NCAtLjcwNzExOSAuNzA3MTE5IC43MDcwOTQgLTE1LjE0MTgyOCAxMy42ODY3MTEpIiBjeD0iOSIgY3k9IjI1IiByPSIzLjkiIGZpbGw9IiM1OWI0ZDkiLz48cGF0aCBkPSJNMjMuOSAyMFYxMGw4IDV6bTAgMjBWMzBsOCA1em04LTEwVjIwbDggNXptMTcuMiA4LjZoLTQuOGMtLjUgMC0uOC4zLS44Ljh2NEg2LjlWNTBoNDIuMmMuNSAwIC44LS4zLjgtLjh2LTkuOGMwLS41LS4zLS44LS44LS44ek00OS4xOCAwSDYuOXY2LjdoMzYuMzh2NC4yYzAgLjUuMy44IDEgLjhoNC44Yy41IDAgLjgtLjMuOC0uOFYuOWMuMS0uNi0uMi0uOS0uNy0uOXoiIGZpbGw9IiMwMDcyYzYiLz48L3N2Zz4="/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 57px; margin-left: 46px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                EventGrid Topics
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="46" y="69" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    EventGri...
+                </text>
+            </switch>
+        </g>
+        <path d="M 327 75 L 370.33 75 L 370.33 75.08 L 407.28 75.1" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 412.53 75.1 L 405.53 78.6 L 407.28 75.1 L 405.53 71.6 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <image x="276.5" y="49.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCI+PHBhdGggZmlsbD0iIzAwNzJjNiIgZD0iTTM5IDIydi0ySDI0LjAwNGwtLjAwOC0uMDA0TDE2Ljk5IDI3aC01LjE3bDEyLTEySDMydi0yaC05di4wMDVMMjIuOTkyIDEzbC0xNCAxNEg3djJoNmw3IDdoMTd2LTJIMjAuODI4bC01LTVIMjh2LTJoLTguMThsNS01eiIvPjxnIGZpbGw9IiM1OWI0ZDkiPjxjaXJjbGUgY3g9IjMwIiBjeT0iMjgiIHI9IjIuOSIvPjxjaXJjbGUgdHJhbnNmb3JtPSJtYXRyaXgoLjcwNzEgLS43MDcxIC43MDcxIC43MDcxIC0uMjMzOCAyNy40MzQ5KSIgY3g9IjMzIiBjeT0iMTQiIHI9IjIuOSIvPjwvZz48ZyBmaWxsPSIjYjhkNDMyIj48Y2lyY2xlIHRyYW5zZm9ybT0ibWF0cml4KC43MDcxIC0uNzA3MSAuNzA3MSAuNzA3MSAtMy4xMzMzIDM0LjQzNDkpIiBjeD0iNDAiIGN5PSIyMSIgcj0iMi45Ii8+PGNpcmNsZSB0cmFuc2Zvcm09Im1hdHJpeCguNzA3MSAtLjcwNzEgLjcwNzEgLjcwNzEgLTEzLjkxMTQgMzYuNDE0MSkiIGN4PSIzNyIgY3k9IjM1IiByPSIyLjkiLz48L2c+PHBhdGggZD0iTS44IDBDLjMgMCAwIC4zIDAgLjh2MTBjMCAuNS4zLjguOC44aDVjLjUgMCAuOC0uMy44LS44VjYuN2gzNi43NnY0LjJjMCAuNS4zLjggMS4wMDIuOGg0LjgwOGMuNSAwIC44LS4zLjgtLjhWLjljLjEtLjYtLjItLjktLjctLjlILjh6bTQ4LjQgNTBjLjUgMCAuOC0uMy44LS44di05LjhjMC0uNS0uMy0uOC0uOC0uOGgtNC44Yy0uNSAwLS44LjMtLjguOHY0SDYuN3YtNC4yYzAtLjUtLjMtLjgtMS0uOEguOGMtLjUgMC0uOC4zLS44IDF2OS44YzAgLjUuMy44LjguOGg0OC40eiIgZmlsbD0iIzAwNzJjNiIvPjwvc3ZnPg=="/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 107px; margin-left: 302px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                Event Grid Subscritions to:
+                                <br/>
+                                ./api/eventgrid
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="302" y="119" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Event Gr...
+                </text>
+            </switch>
+        </g>
+        <path d="M 71 180 L 174 180 L 174 79.58 L 269.58 79.55" fill="none" stroke="#000000" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 274.83 79.55 L 267.83 83.05 L 269.58 79.55 L 267.83 76.05 Z" fill="#000000" stroke="#000000" stroke-miterlimit="10" pointer-events="all"/>
+        <image x="20.5" y="154.5" width="50" height="50" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iLTQ1NCAyNTYgNDAgNDAiIGZpbGw9IiNiOGQ0MzIiPjxwYXRoIGQ9Ik0tNDU0IDI1NmgxMnYxMmgtMTJ6bTE0IDBoMTJ2MTJoLTEyem0xNCAwaDEydjEyaC0xMnptLTI4IDE0aDEydjEyaC0xMnptMTQgMGgxMnYxMmgtMTJ6bTE0IDBoMTJ2MTJoLTEyem0tMjggMTRoMTJ2MTJoLTEyem0xNCAwaDEydjEyaC0xMnptMTQgMGgxMnYxMmgtMTJ6Ii8+PC9zdmc+"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 212px; margin-left: 46px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                Events from 
+                                <br/>
+                                Azure Resources
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="46" y="224" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Events f...
+                </text>
+            </switch>
+        </g>
+        <rect x="666.88" y="50" width="54.84" height="45" fill="none" stroke="none" pointer-events="all"/>
+        <path d="M 670.44 81.64 L 718.16 81.64 L 718.16 53.52 L 670.44 53.52 Z M 669.61 85.16 C 668.38 85.16 666.88 83.98 666.88 82.39 L 666.88 52.82 C 666.88 51.31 668.23 50 669.58 50 L 718.99 50 C 720.44 50 721.72 51.38 721.72 52.75 L 721.72 82.36 C 721.72 83.64 720.68 85.16 718.89 85.16 L 700.57 85.16 C 700.27 86.2 699.99 87.25 699.98 88.29 C 699.97 90.03 701 90.7 702.53 91.09 C 704.42 91.51 706.42 91.51 708.42 91.55 C 709.24 91.55 710.18 92.24 710.18 93.34 C 710.18 94.23 709.35 95 708.6 95 L 679.95 95 C 679.15 95 678.28 94.26 678.28 93.37 C 678.28 92.36 679.01 91.55 679.98 91.55 C 682.32 91.49 685.35 91.53 687.1 90.73 C 687.89 90.36 688.56 89.78 688.6 88.51 C 688.66 87.41 688.33 86.27 688.04 85.16 Z" fill="#1ba1e2" stroke="#006eaf" stroke-miterlimit="10" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe flex-start; justify-content: unsafe center; width: 1px; height: 1px; padding-top: 102px; margin-left: 694px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #000000; line-height: 1.2; pointer-events: all; background-color: #ffffff; white-space: nowrap; ">
+                                Browser
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="694" y="114" fill="#000000" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    Browser
+                </text>
+            </switch>
+        </g>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

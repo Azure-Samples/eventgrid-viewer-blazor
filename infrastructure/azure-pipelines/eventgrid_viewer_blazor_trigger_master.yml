@@ -1,0 +1,12 @@
+trigger:
+  branches:
+    include:
+      - master
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- template: templates/steps/deploy-steps-template.yml
+  parameters:
+    location: 'eastus'
+    repoURL: 'https://github.com/Azure-Samples/eventgrid-viewer-blazor.git'

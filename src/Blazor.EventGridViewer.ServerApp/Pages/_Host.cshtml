@@ -1,0 +1,52 @@
+﻿@page "/"
+@namespace Blazor.EventGridViewer.ServerApp.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventGrid Viewer Blazor</title>
+    <base href="~/" />
+    <link href="css/site.css" rel="stylesheet" />
+    <!--fontawesome-->
+    <link href="~/css/fontawesome/all.min.css" rel="stylesheet" />
+    <!--prismjs-->
+    <link href="~/css/prismjs/prism.css" rel="stylesheet" />
+</head>
+<body>
+    <app>
+        <component type="typeof(App)" render-mode="ServerPrerendered" />
+    </app>
+
+    <div id="blazor-error-ui">
+        <environment include="Staging,Production">
+            An error has occurred. This application may no longer respond until reloaded.
+        </environment>
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.server.js"></script>
+
+    <!-- BlazorStyled is used by BlazorStrap documentation site -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+    <!-- The below two files are needed by BlazorStrap -->
+    <script src="_content/BlazorStrap/blazorStrap.js"></script>
+    <script src="_content/BlazorStrap/popper.min.js"></script>
+
+    <!--prismjs-->
+    <script src="~/scripts/prismjs/prism.js"></script>
+
+    <!--Custom eventgrid-viewer-blazor javascript to copy text to clipboard-->
+    <script src="~/scripts/clipboardCopy.js"></script>
+</body>
+</html>

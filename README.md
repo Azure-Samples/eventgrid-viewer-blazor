@@ -1,57 +1,61 @@
-# Project Name
+---
+page_type: guide
+languages:
+- aspnet
+- blazor
+- csharp
+- javascript
 
-(short, 1-3 sentenced, description of the project)
+products:
+- azure-eventgrid
+- azure-active-directory
+- azure-keyvault
+- azure-managed-identity
 
-## Features
+description: "The EventGrid Viewer Blazor application can be used to view Azure EventGrid messages in realtime using ASP.Net Core Blazor & SignalR."
+urlFragment: "eventgrid-viewer-blaozr"
+---
 
-This project framework provides the following features:
+# Overview
 
-* Feature 1
-* Feature 2
-* ...
+The EventGrid Viewer Blazor application can be used to view [Azure EventGrid](https://docs.microsoft.com/en-us/azure/event-grid/overview) messages in realtime using [ASP.Net Core Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/?view=aspnetcore-3.1) & [SignalR](https://docs.microsoft.com/en-us/aspnet/signalr/overview/getting-started/introduction-to-signalr).  For those who would like to secure the application, the EventGrid Viewer Blazor application can be easily configured via appsettings to use Azure AD authentication, Azure KeyVault & Managed Identities.
 
-## Getting Started
+![overview diagram](./docs/images/overview.drawio.svg)
 
-### Prerequisites
+Building upon some of the ideas of the [azure-event-grid-viewer](https://github.com/Azure-Samples/azure-event-grid-viewer), the EventGrid Viewer Blazor application was written in [Blazor](https://dotnet.microsoft.com/apps/aspnet/web-apps/blazor) and offers the following features:
 
-(ideally very short, if any)
+1. View all Azure EventGrid messages in json format
+1. View formatted & highlighted json
+1. Copy json messages to the clipboard
+1. Enable Azure AD authentication to secure the application
 
-- OS
-- Library version
-- ...
+## Screenshot
 
-### Installation
+![eventgrid-viewer-blazor Screenshot](docs/images/eventgrid-viewer-blazor-screenshot.png)
 
-(ideally very short)
+## Usage
 
-- npm install [package name]
-- mvn install
-- ...
+To quickly deploy the EventGrid Viewer Blazor application to Azure, hit the button below *(for examples on how to deploy with Azure AD authentication, see the [examples section](#examples))*:
 
-### Quickstart
-(Add steps to get up and running quickly)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Feventgrid-viewer-blazor%2Fmain%2Finfrastructure%2Farm%2Fazuredeploy.json)
 
-1. git clone [repository clone url]
-2. cd [respository name]
-3. ...
+You will be presented with a screen similar to the image below:
 
+![Deploy to Azure](docs/images/deploy-to-azure-no-auth.png)
 
-## Demo
+Do the following:
 
-A demo app is included to show how to use the project.
+1. Create or Select a Resource Group
+1. Enter a Site Name
+1. Enter a Hosting Plan Name
+1. Hit the *Review + Create* button to validate & deploy the EventGrid Viewer Blazor application
 
-To run the demo, follow these steps:
+Use the Webhook endpoint:
 
-(Add steps to start up the demo)
+ ```https://{{site-name}}.azurewebsites.net/api/eventgrid```
 
-1.
-2.
-3.
+ to [subscribe to EventGrid events](https://docs.microsoft.com/en-us/azure/event-grid/subscribe-through-portal).
 
-## Resources
+## Examples
 
-(Any additional resources or related projects)
-
-- Link to supporting information
-- Link to similar sample
-- ...
+In the *examples* folder, examples have been created to demonstrate how to automate the deployment of the EventGrid Viewer Blazor application with or without authentication.  You can read more [here](examples).
