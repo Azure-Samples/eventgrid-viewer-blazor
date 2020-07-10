@@ -1,5 +1,5 @@
 ---
-page_type: guide
+page_type: sample
 languages:
 - aspnet
 - blazor
