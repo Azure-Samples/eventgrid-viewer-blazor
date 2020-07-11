@@ -5,8 +5,8 @@ languages:
 products:
 - aspnet
 - azure-event-grid
-description: "The EventGrid Viewer Blazor application can be used to view Azure EventGrid messages in realtime using ASP.Net Core Blazor & SignalR. For those who would like to secure the application, the EventGrid Viewer Blazor application can be easily configured via appsettings to use Azure AD authentication, Azure KeyVault & Managed Identities"
-urlFragment: "eventgrid-viewer-blazor"
+description: The EventGrid Viewer Blazor application can be used to view Azure EventGrid messages in realtime using ASP.Net Core Blazor and SignalR. For those who would like to secure the application, the EventGrid Viewer Blazor application can be easily configured via appsettings to use Azure AD authentication, Azure KeyVault and Managed Identities
+urlFragment: eventgrid-viewer-blazor
 ---
 
 ![Build](https://github.com/Azure-Samples/eventgrid-viewer-blazor/workflows/Build/badge.svg)
