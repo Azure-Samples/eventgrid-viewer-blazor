@@ -3,11 +3,10 @@ page_type: sample
 languages:
 - bash
 - csharp
-- javascript
 products:
 - aspnet
 - azure-event-grid
-description: "The EventGrid Viewer Blazor application can be used to view Azure EventGrid messages in realtime using ASP.Net Core Blazor & SignalR."
+description: "The EventGrid Viewer Blazor application can be used to view Azure EventGrid messages in realtime using ASP.Net Core Blazor & SignalR. For those who would like to secure the application, the EventGrid Viewer Blazor application can be easily configured via appsettings to use Azure AD authentication, Azure KeyVault & Managed Identities"
 urlFragment: "eventgrid-viewer-blazor"
 ---
 
