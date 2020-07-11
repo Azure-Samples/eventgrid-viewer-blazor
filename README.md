@@ -1,7 +1,6 @@
 ---
 page_type: sample
 languages:
-- bash
 - csharp
 products:
 - aspnet
