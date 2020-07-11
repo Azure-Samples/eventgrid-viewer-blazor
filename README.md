@@ -7,13 +7,10 @@ languages:
 - javascript
 
 products:
-- azure-eventgrid
-- azure-active-directory
-- azure-keyvault
-- azure-managed-identity
+- azure-event-grid
 
 description: "The EventGrid Viewer Blazor application can be used to view Azure EventGrid messages in realtime using ASP.Net Core Blazor & SignalR."
-urlFragment: "eventgrid-viewer-blaozr"
+urlFragment: "eventgrid-viewer-blazor"
 ---
 
 ![Build](https://github.com/Azure-Samples/eventgrid-viewer-blazor/workflows/Build/badge.svg)
