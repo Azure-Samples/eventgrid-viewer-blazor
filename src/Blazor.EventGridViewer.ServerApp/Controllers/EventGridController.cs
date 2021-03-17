@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Blazor.EventGridViewer.Core.Models;
@@ -36,6 +37,21 @@ namespace Blazor.EventGridViewer.ServerApp.Controllers
         public string Get()
         {
             return "EventGridController is running...";
+        }
+
+        [HttpOptions]
+        public async Task<IActionResult> Options()
+        {
+            IActionResult result = Ok();
+            var webhookRequestOrigin = Request.HttpContext.Request.Headers["WebHook-Request-Origin"].FirstOrDefault();
+            var webhookRequestCallback = Request.HttpContext.Request.Headers["WebHook-Request-Callback"];
+            var webhookRequestRate = Request.HttpContext.Request.Headers["WebHook-Request-Rate"];
+            
+            // Respond with the appropriate origin and allowed rate to
+            // confirm acceptance of incoming notications
+            Request.HttpContext.Response.Headers.Add("WebHook-Allowed-Rate", "*");
+            Request.HttpContext.Response.Headers.Add("WebHook-Allowed-Origin", webhookRequestOrigin);
+            return result;
         }
 
         /// <summary>
