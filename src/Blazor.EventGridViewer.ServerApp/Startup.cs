@@ -96,13 +96,6 @@ namespace Blazor.EventGridViewer.ServerApp
         /// Check EnableAuth value
         /// </summary>
         /// <returns>boolean</returns>
-        private bool EnableAuth()
-        {
-            var enableAuth = Configuration["EnableAuth"];
-            if (enableAuth == "true")
-                return true;
-            else
-                return false;
-        }
+        private bool EnableAuth() => Configuration["EnableAuth"] == "true";
     }
 }
