@@ -74,6 +74,9 @@
       "metadata": {
         "description": "The Azure AD Primary domain if enabling authentication ie youraccount.onmicrosoft.com."
       }
+    },
+    "netFrameworkVersion": {
+      "value": "v5.0"
     }
   },
   "variables": {
