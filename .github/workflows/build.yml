@@ -18,7 +18,7 @@ on:
 name: 'Build'
 
 env:
-  NET_CORE_VERSION: '3.1.301'
+  NET_CORE_VERSION: '5.0.x'
   CONFIGURATION: 'Release'
 
 jobs:
