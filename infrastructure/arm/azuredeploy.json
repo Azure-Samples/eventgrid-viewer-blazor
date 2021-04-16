@@ -112,37 +112,38 @@
       "properties": {
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
-              "webSocketsEnabled": true,
-              "appSettings": [
-                  {
-                    "name": "PROJECT",
-                    "value": "[variables('projectFile')]"
-                  },
-                  {
-                    "name": "EnableAuth",
-                    "value": "[parameters('enableAuth')]"
-                  },
-                  {
-                    "name": "AzureAd:TenantId",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdTenantId'))]"
-                  },
-                  {
-                    "name": "AzureAd:Instance",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdInstance'))]"
-                  },
-                  {
-                    "name": "AzureAd:CallbackPath",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdCallbackPath'))]"
-                  },
-                  {
-                    "name": "AzureAd:Domain",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', parameters('azAdDomain'))]"
-                  },
-                  {
-                    "name": "AzureAd:ClientId",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdClientId'))]"
-                  }
-              ]
+          "webSocketsEnabled": true,
+          "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
+          "appSettings": [
+            {
+              "name": "PROJECT",
+              "value": "[variables('projectFile')]"
+            },
+            {
+              "name": "EnableAuth",
+              "value": "[parameters('enableAuth')]"
+            },
+            {
+              "name": "AzureAd:TenantId",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdTenantId'))]"
+            },
+            {
+              "name": "AzureAd:Instance",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdInstance'))]"
+            },
+            {
+              "name": "AzureAd:CallbackPath",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdCallbackPath'))]"
+            },
+            {
+              "name": "AzureAd:Domain",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', parameters('azAdDomain'))]"
+            },
+            {
+              "name": "AzureAd:ClientId",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdClientId'))]"
+            }
+          ]
         }
       },
       "resources": [
