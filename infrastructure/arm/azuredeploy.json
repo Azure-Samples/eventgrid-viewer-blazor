@@ -77,7 +77,7 @@
     },
     "netFrameworkVersion": {
       "type": "string",
-      "value": "v5.0"
+      "defaultValue": "v5.0"
     }
   },
   "variables": {
