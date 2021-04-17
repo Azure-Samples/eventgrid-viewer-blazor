@@ -114,13 +114,7 @@
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
           "webSocketsEnabled": true,
-          "netFrameworkVerion": "[parameters('netFrameworkVersion')]",
-          "metadata": [
-            {
-              "name": "CURRENT_STACK",
-              "value": "dotnet"
-            }
-          ],
+          "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
           "appSettings": [
             {
               "name": "PROJECT",
