@@ -115,12 +115,6 @@
         "siteConfig": {
           "webSocketsEnabled": true,
           "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
-          "metadata": [
-            {
-              "name": "CURRENT_STACK",
-              "value": "dotnet"
-            }
-          ],
           "appSettings": [
             {
               "name": "PROJECT",
