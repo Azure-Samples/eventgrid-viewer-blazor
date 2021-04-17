@@ -29,6 +29,10 @@
         "description": "The pricing tier for the hosting plan."
       }
     },
+    "netFrameworkVersion": {
+      "type": "string",
+      "value": "v5.0"
+    },
     "repoURL": {
       "type": "string",
       "defaultValue": "https://github.com/Azure-Samples/eventgrid-viewer-blazor.git",
@@ -110,7 +114,7 @@
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
           "webSocketsEnabled": true,
-          "netFrameworkVersion": "v5.0",
+          "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
           "metadata": [
             {
               "name": "CURRENT_STACK",
