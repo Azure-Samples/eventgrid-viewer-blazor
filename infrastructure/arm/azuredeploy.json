@@ -74,10 +74,6 @@
       "metadata": {
         "description": "The Azure AD Primary domain if enabling authentication ie youraccount.onmicrosoft.com."
       }
-    },
-    "netFrameworkVersion": {
-      "type": "string",
-      "defaultValue": "v5.0"
     }
   },
   "variables": {
@@ -114,7 +110,7 @@
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
           "webSocketsEnabled": true,
-          "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
+          "netFrameworkVersion": "v5.0",
           "metadata": [
             {
               "name": "CURRENT_STACK",
