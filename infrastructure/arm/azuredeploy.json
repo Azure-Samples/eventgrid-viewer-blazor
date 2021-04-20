@@ -111,7 +111,7 @@
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
           "webSocketsEnabled": true,
-          "netFrameworkVersion": "[parameters('netFrameworkVersion')]",
+          "netFrameworkVersion": "[variables('netFrameworkVersion')]",
           "appSettings": [
             {
               "name": "PROJECT",
