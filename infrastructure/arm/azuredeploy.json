@@ -29,10 +29,6 @@
         "description": "The pricing tier for the hosting plan."
       }
     },
-    "netFrameworkVersion": {
-      "type": "string",
-      "defaultValue": "v5.0"
-    },
     "repoURL": {
       "type": "string",
       "defaultValue": "https://github.com/Azure-Samples/eventgrid-viewer-blazor.git",
@@ -86,7 +82,8 @@
     "azAdInstance": "https://login.microsoftonline.com/",
     "azAdCallbackPath": "/signin-oidc",
     "azAdClientIdSecretName": "sct-egvb-azad-client-id",
-    "azAdClientId": "[concat('@Microsoft.KeyVault(SecretUri=https://', parameters('keyvaultName'), '.vault.azure.net/secrets/', variables('azAdClientIdSecretName'), '/)')]"
+    "azAdClientId": "[concat('@Microsoft.KeyVault(SecretUri=https://', parameters('keyvaultName'), '.vault.azure.net/secrets/', variables('azAdClientIdSecretName'), '/)')]",
+    "netFrameworkVersion": "v5.0"
   },
   "resources": [
     {
