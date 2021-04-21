@@ -82,7 +82,8 @@
     "azAdInstance": "https://login.microsoftonline.com/",
     "azAdCallbackPath": "/signin-oidc",
     "azAdClientIdSecretName": "sct-egvb-azad-client-id",
-    "azAdClientId": "[concat('@Microsoft.KeyVault(SecretUri=https://', parameters('keyvaultName'), '.vault.azure.net/secrets/', variables('azAdClientIdSecretName'), '/)')]"
+    "azAdClientId": "[concat('@Microsoft.KeyVault(SecretUri=https://', parameters('keyvaultName'), '.vault.azure.net/secrets/', variables('azAdClientIdSecretName'), '/)')]",
+    "netFrameworkVersion": "v5.0"
   },
   "resources": [
     {
@@ -109,37 +110,38 @@
       "properties": {
         "serverFarmId": "[parameters('hostingPlanName')]",
         "siteConfig": {
-              "webSocketsEnabled": true,
-              "appSettings": [
-                  {
-                    "name": "PROJECT",
-                    "value": "[variables('projectFile')]"
-                  },
-                  {
-                    "name": "EnableAuth",
-                    "value": "[parameters('enableAuth')]"
-                  },
-                  {
-                    "name": "AzureAd:TenantId",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdTenantId'))]"
-                  },
-                  {
-                    "name": "AzureAd:Instance",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdInstance'))]"
-                  },
-                  {
-                    "name": "AzureAd:CallbackPath",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdCallbackPath'))]"
-                  },
-                  {
-                    "name": "AzureAd:Domain",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', parameters('azAdDomain'))]"
-                  },
-                  {
-                    "name": "AzureAd:ClientId",
-                    "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdClientId'))]"
-                  }
-              ]
+          "webSocketsEnabled": true,
+          "netFrameworkVersion": "[variables('netFrameworkVersion')]",
+          "appSettings": [
+            {
+              "name": "PROJECT",
+              "value": "[variables('projectFile')]"
+            },
+            {
+              "name": "EnableAuth",
+              "value": "[parameters('enableAuth')]"
+            },
+            {
+              "name": "AzureAd:TenantId",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdTenantId'))]"
+            },
+            {
+              "name": "AzureAd:Instance",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdInstance'))]"
+            },
+            {
+              "name": "AzureAd:CallbackPath",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdCallbackPath'))]"
+            },
+            {
+              "name": "AzureAd:Domain",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', parameters('azAdDomain'))]"
+            },
+            {
+              "name": "AzureAd:ClientId",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdClientId'))]"
+            }
+          ]
         }
       },
       "resources": [
