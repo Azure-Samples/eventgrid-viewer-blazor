@@ -10,7 +10,7 @@ The purpose of this document is to provide documentation about the ARM Template 
 
 ### Purpose
 
-The *azuredeploy* script is used to deploy the eventgrid-viewer-blazor application to Azure directly from a Git repository.  You can run the script locally & it is also called by  the [eventgrid_viewer_blazor_trigger_master Pipeline](azure-pipelines/README.md#eventgrid_viewer_blazor_trigger_master-pipeline)
+The *azuredeploy* script is used to deploy the eventgrid-viewer-blazor application to Azure directly from a Git repository.  You can run the script locally & it is also called by  the [eventgrid_viewer_blazor_trigger_main Pipeline](azure-pipelines/README.md#eventgrid_viewer_blazor_trigger_main-pipeline)
 
 ### ARM Template
 
@@ -31,7 +31,7 @@ The *azuredeploy* script uses the *azuredeploy.json* ARM Template to deploy reso
 - e - Environment - Environment ie dev, test (required)
 - l - Location - Azure location ie eastus, westus (required)
 - r - Repo url - The git repository where the codebase is located ie ```https://github.com/Azure-Samples/eventgrid-viewer-blazor.git``` (required)
-- b - Repo branch - The git repository branch to use ie master (required)
+- b - Repo branch - The git repository branch to use ie main (required)
 - a - Enable auth - The flag to enable Azure AD authentication.  Default is false (optional)
 - k - Keyvault name - The name of the Azure Keyvault to store Azure AD secrets if enabling authentication.  Default is none (optional)
 - d - Azure AD domain - The Azure AD Primary Domain if enabling authentication ie ```{youraccount}.onmicrosoft.com```.  Default is none (optional)
@@ -46,5 +46,5 @@ The *azuredeploy* script uses the *azuredeploy.json* ARM Template to deploy reso
 
     # grant execute permissions & run the script
     chmod +x azuredeploy.sh &&
-    ./azuredeploy.sh -g rg-cse-egvb-dev -s as-cse-egvb-dev -p asp-cse-egvb-dev -l eastus -r https://github.com/Azure-Samples/eventgrid-viewer-blazor.git -b master
+    ./azuredeploy.sh -g rg-cse-egvb-dev -s as-cse-egvb-dev -p asp-cse-egvb-dev -l eastus -r https://github.com/Azure-Samples/eventgrid-viewer-blazor.git -b main
 ```
