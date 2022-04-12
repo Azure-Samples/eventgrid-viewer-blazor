@@ -1,0 +1,20 @@
+name: Report To Velocity
+
+on:
+  pull_request:
+    branches:
+      - 'main'
+      - 'master'
+    types: [closed]
+
+jobs:
+  check-in-to-velocity:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # run the curl command, taking inputs.
+      - run: curl -d "token=$VELOCITY_DEPLOYMENT_TOKEN" -d "revision=${{ github.sha }}" -d "repository_url=${{ github.server_url }}/${{ github.repository }}" -d "branch=${{ github.ref_name }}" -d "version=${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }}" -d "environment=prod"  https://velocity.codeclimate.com/deploys
+        env:
+          VELOCITY_DEPLOYMENT_TOKEN: ${{ secrets.VELOCITY_DEPLOYMENT_TOKEN }}
