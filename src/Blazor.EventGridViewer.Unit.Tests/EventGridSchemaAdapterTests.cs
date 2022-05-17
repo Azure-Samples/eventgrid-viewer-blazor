@@ -1,7 +1,6 @@
 ﻿using Blazor.EventGridViewer.Core.Models;
 using Blazor.EventGridViewer.Services.Adapters;
 using Blazor.EventGridViewer.Services.Interfaces;
-//using Microsoft.Azure.EventGrid.Models;
 using Moq;
 using Newtonsoft.Json;
 using System.Collections.Generic;

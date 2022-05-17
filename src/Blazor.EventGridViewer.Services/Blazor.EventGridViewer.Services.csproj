@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
@@ -10,7 +10,6 @@
 
   <ItemGroup>
     <PackageReference Include="Azure.Messaging.EventGrid" Version="4.10.0" />
-    <PackageReference Include="Microsoft.Azure.EventGrid" Version="3.2.0" />
   </ItemGroup>
 
 </Project>
