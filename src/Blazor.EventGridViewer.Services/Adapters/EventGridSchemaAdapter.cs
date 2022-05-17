@@ -1,10 +1,11 @@
 ﻿using Blazor.EventGridViewer.Core;
 using Blazor.EventGridViewer.Core.Models;
 using Blazor.EventGridViewer.Services.Interfaces;
-using Microsoft.Azure.EventGrid.Models;
+//using Microsoft.Azure.EventGrid.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using Azure.Messaging.EventGrid;
 
 namespace Blazor.EventGridViewer.Services.Adapters
 {
@@ -84,7 +85,7 @@ namespace Blazor.EventGridViewer.Services.Adapters
                     Subject = string.IsNullOrEmpty(eventGridEvent.Subject) ? eventGridEvent.EventType : eventGridEvent.Subject,
                     Data = json,
                     EventData = eventGridEvent.Data,
-                    EventTime = eventGridEvent.EventTime.ToString("o") // https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tostring?view=netcore-3.1
+                    EventTime = eventGridEvent.EventTime // https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tostring?view=netcore-3.1
                 };
                 models.Add(model);
             }

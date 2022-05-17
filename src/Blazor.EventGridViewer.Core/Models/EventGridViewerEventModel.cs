@@ -18,7 +18,7 @@ namespace Blazor.EventGridViewer.Core.Models
         /// <summary>
         /// EventGrid Data
         /// </summary>
-        public string Data { get; set; }
+        public BinaryData Data { get; set; }
         /// <summary>
         /// EventGrid Subject
         /// </summary>
@@ -26,7 +26,7 @@ namespace Blazor.EventGridViewer.Core.Models
         /// <summary>
         /// EventGrid Event Time
         /// </summary>
-        public string EventTime { get; set; }
+        public DateTimeOffset EventTime { get; set; }
         /// <summary>
         /// Unique Id for EventGridViewer Event
         /// </summary>

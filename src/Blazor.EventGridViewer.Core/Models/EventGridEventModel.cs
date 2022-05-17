@@ -1,4 +1,6 @@
-﻿namespace Blazor.EventGridViewer.Core.Models
+﻿using System;
+
+namespace Blazor.EventGridViewer.Core.Models
 {
     /// <summary>
     /// Class used as a model for EventGrid Events
@@ -24,10 +26,14 @@
         /// <summary>
         /// EventGrid Data
         /// </summary>
-        public object EventData { get; set; }
+        public BinaryData EventData { get; set; }
         /// <summary>
         /// EventGrid Event Time
         /// </summary>
-        public string EventTime { get; set; }
+        public DateTimeOffset EventTime { get; set; }
+        /// <summary>
+        /// Data Version
+        /// </summary>
+        public string DataVersion { get; set; }
     }
 }

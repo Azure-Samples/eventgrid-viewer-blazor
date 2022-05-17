@@ -1,12 +1,13 @@
 ﻿using Blazor.EventGridViewer.Core.Models;
 using Blazor.EventGridViewer.Services.Adapters;
 using Blazor.EventGridViewer.Services.Interfaces;
-using Microsoft.Azure.EventGrid.Models;
+//using Microsoft.Azure.EventGrid.Models;
 using Moq;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
+using Azure.Messaging.EventGrid;
 
 namespace Blazor.EventGridViewer.Unit.Tests
 {
@@ -51,10 +52,10 @@ namespace Blazor.EventGridViewer.Unit.Tests
 
             // Assert
             Assert.True(model.Id == mockModel.Id && model.Subject == mockModel.Subject &&
-                model.EventType == mockModel.EventType && model.EventTime == mockModel.EventTime.ToString("o"));
+                model.EventType == mockModel.EventType && model.EventTime == mockModel.EventTime);
 
             var data = JsonConvert.SerializeObject(mockModel, Formatting.Indented);
-            Assert.Equal(data, model.Data);
+            Assert.Equal(data, model.Data.ToString());
         }
 
         /// <summary>
@@ -78,7 +79,7 @@ namespace Blazor.EventGridViewer.Unit.Tests
                 model.EventType == mockModel.Type && model.EventTime == mockModel.Time);
 
             var data = JsonConvert.SerializeObject(mockModel, Formatting.Indented);
-            Assert.Equal(data, model.Data);
+            Assert.Equal(data, model.Data.ToString());
         }
     }
 }

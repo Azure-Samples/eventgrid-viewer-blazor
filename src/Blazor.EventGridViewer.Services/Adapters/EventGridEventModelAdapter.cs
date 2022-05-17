@@ -21,7 +21,7 @@ namespace Blazor.EventGridViewer.Services.Adapters
 
             EventGridViewerEventModel model = new EventGridViewerEventModel()
             {
-                Data = t.Data,
+                Data = t.EventData,
                 EventType = t.EventType,
                 Subject = t.Subject,
                 Id = t.Id,

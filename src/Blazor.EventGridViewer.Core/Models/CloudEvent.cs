@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System;
 
 namespace Blazor.EventGridViewer.Core.Models
 {
@@ -21,9 +22,9 @@ namespace Blazor.EventGridViewer.Core.Models
         public string Id { get; set; }
 
         [JsonProperty("time")]
-        public string Time { get; set; }
+        public DateTimeOffset Time { get; set; }
 
         [JsonProperty("data")]
-        public object Data { get; set; }
+        public BinaryData Data { get; set; }
     }
 }

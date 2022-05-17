@@ -11,7 +11,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Authentication;
 using Blazor.EventGridViewer.Services.Adapters;
-using Microsoft.Azure.EventGrid.Models;
 using Blazor.EventGridViewer.Core.Models;
 using System.Collections.Generic;
 
