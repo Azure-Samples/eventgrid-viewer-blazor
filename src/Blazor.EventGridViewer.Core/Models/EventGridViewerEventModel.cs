@@ -18,7 +18,7 @@ namespace Blazor.EventGridViewer.Core.Models
         /// <summary>
         /// EventGrid Data
         /// </summary>
-        public BinaryData Data { get; set; }
+        public string Data { get; set; }
         /// <summary>
         /// EventGrid Subject
         /// </summary>

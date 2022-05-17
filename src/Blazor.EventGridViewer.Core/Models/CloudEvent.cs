@@ -25,6 +25,6 @@ namespace Blazor.EventGridViewer.Core.Models
         public DateTimeOffset Time { get; set; }
 
         [JsonProperty("data")]
-        public BinaryData Data { get; set; }
+        public object Data { get; set; }
     }
 }

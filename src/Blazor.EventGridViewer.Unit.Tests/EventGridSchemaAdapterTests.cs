@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using Azure.Messaging.EventGrid;
+using Newtonsoft.Json.Linq;
 
 namespace Blazor.EventGridViewer.Unit.Tests
 {
@@ -44,7 +45,7 @@ namespace Blazor.EventGridViewer.Unit.Tests
             Mock<IEventGridIdentifySchemaService> mockEventGridIdentifySchemaService = new Mock<IEventGridIdentifySchemaService>();
             mockEventGridIdentifySchemaService.Setup(s => s.Identify(json)).Returns(Core.EventGridSchemaType.EventGrid);
             IAdapter<string, List<EventGridEventModel>> adapter = new EventGridSchemaAdapter(mockEventGridIdentifySchemaService.Object);
-            var mockModel = JsonConvert.DeserializeObject<List<EventGridEvent>>(json).FirstOrDefault();
+            var mockModel = EventGridEvent.ParseMany(new System.BinaryData(json)).FirstOrDefault();
 
             // Act
             var model = adapter.Convert(Data.GetMockEventGridEventJson()).FirstOrDefault();
