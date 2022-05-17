@@ -37,19 +37,7 @@ namespace Blazor.EventGridViewer.Unit.Tests
         public static string GetMockCloudEventExtraPropertiesJson()
         {
             // Note: guids were generated with an online guid generator
-            string mockCloudEventExtraProperties = @"[{
-  'specversion' : '1.0',
-  'type':'com.github.pull.create',
-  'source':'https://github.com/cloudevents/spec/pull',
-  'subject': '123',
-  'id': 'efdae305-d50f-49f6-a6ec-bd632d52bb3b',
-  'time': '2018-01-25T22:12:19.4556811Z',
-  'comexampleothervalue':'5',
-  'data': {
-    'make': 'Ducati',
-    'model':'Monster'
-  }
-}]";
+            string mockCloudEventExtraProperties = "[{\"specversion\":\"1.0\",\"type\":\"com.github.pull.create\",\"source\":\"https://github.com/cloudevents/spec/pull\",\"subject\":\"123\",\"id\":\"efdae305-d50f-49f6-a6ec-bd632d52bb3b\",\"time\": \"2018-01-25T22:12:19.4556811Z\",\"comexampleothervalue\":\"5\",\"data\": {\"make\": \"Ducati\",\"model\":\"Monster\"}}]";
             return mockCloudEventExtraProperties;
         }
     }

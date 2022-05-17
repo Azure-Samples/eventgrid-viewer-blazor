@@ -75,7 +75,7 @@ namespace Blazor.EventGridViewer.ServerApp.Controllers
                     }
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
             }

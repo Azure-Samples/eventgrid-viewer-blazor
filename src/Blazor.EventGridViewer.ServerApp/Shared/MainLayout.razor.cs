@@ -19,7 +19,7 @@ namespace Blazor.EventGridViewer.ServerApp.Shared
             {
                 await BootstrapCss.SetBootstrapCss(BOOTSTRAP_VERSION);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 _isServerSide = true;
             }
