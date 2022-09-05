@@ -1,10 +1,10 @@
 ﻿using Blazor.EventGridViewer.Core;
 using Blazor.EventGridViewer.Core.Models;
 using Blazor.EventGridViewer.Services.Interfaces;
-using Microsoft.Azure.EventGrid.Models;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using Azure.Messaging.EventGrid;
 
 namespace Blazor.EventGridViewer.Services.Adapters
 {
@@ -56,7 +56,7 @@ namespace Blazor.EventGridViewer.Services.Adapters
                 EventType = cloudEvent.Type,
                 Subject = string.IsNullOrEmpty(cloudEvent.Subject) ? cloudEvent.Type : cloudEvent.Subject,
                 Data = json,
-                EventData = cloudEvent.Data,
+                EventData = new BinaryData(cloudEvent.Data),
                 EventTime = cloudEvent.Time
             };
             models.Add(model);
@@ -72,7 +72,7 @@ namespace Blazor.EventGridViewer.Services.Adapters
         private List<EventGridEventModel> AdaptEventGridEvent(string t)
         {
             List<EventGridEventModel> models = new List<EventGridEventModel>();
-            var eventGridEvents = JsonConvert.DeserializeObject<List<EventGridEvent>>(t);
+            var eventGridEvents = EventGridEvent.ParseMany(new BinaryData(t));
 
             foreach (var eventGridEvent in eventGridEvents)
             {

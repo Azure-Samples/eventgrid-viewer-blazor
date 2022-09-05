@@ -1,12 +1,12 @@
 ﻿using Blazor.EventGridViewer.Core.Models;
 using Blazor.EventGridViewer.Services.Adapters;
 using Blazor.EventGridViewer.Services.Interfaces;
-using Microsoft.Azure.EventGrid.Models;
 using Moq;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
+using Azure.Messaging.EventGrid;
 
 namespace Blazor.EventGridViewer.Unit.Tests
 {

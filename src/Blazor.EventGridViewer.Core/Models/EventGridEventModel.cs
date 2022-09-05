@@ -29,5 +29,9 @@
         /// EventGrid Event Time
         /// </summary>
         public string EventTime { get; set; }
+        /// <summary>
+        /// Data Version
+        /// </summary>
+        public string DataVersion { get; set; }
     }
 }
