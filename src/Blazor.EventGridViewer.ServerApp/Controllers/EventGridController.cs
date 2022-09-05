@@ -61,7 +61,7 @@ namespace Blazor.EventGridViewer.ServerApp.Controllers
                         // EventGrid validation message
                         if (model.EventType == "SubscriptionValidationEventData")
                         {
-                            var eventData = ((JObject)(model.EventType)).ToObject<SubscriptionValidationEventData>();
+                            var eventData = ((JObject)(model.EventData)).ToObject<SubscriptionValidationEventData>();
                             var responseData = new SubscriptionValidationResponse()
                             {
                                 ValidationResponse = eventData.ValidationCode

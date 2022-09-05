@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Blazor.EventGridViewer.Core.Models
+﻿namespace Blazor.EventGridViewer.Core.Models
 {
     /// <summary>
     /// Class used as a model for EventGrid Events

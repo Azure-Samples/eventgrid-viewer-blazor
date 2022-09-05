@@ -1,5 +1,4 @@
-﻿using Azure.Messaging.EventGrid;
-using Blazor.EventGridViewer.Core.CustomEventArgs;
+﻿using Blazor.EventGridViewer.Core.CustomEventArgs;
 using Blazor.EventGridViewer.Core.Models;
 using System;
 

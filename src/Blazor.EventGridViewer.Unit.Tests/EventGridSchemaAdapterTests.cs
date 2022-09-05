@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 using Azure.Messaging.EventGrid;
-using Newtonsoft.Json.Linq;
 
 namespace Blazor.EventGridViewer.Unit.Tests
 {

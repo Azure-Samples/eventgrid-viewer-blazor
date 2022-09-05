@@ -27,7 +27,7 @@
                     <BSCollapse>
                         <BSCard CardType="CardType.Body">
                             <BSCard CardType="CardType.Text"><pre><code class="language-json">@model.Data</code></pre></BSCard>
-                            <span role="button" title="Copy Data"><i class="fa fa-copy fa-3x eventgrid-viewer-blazor-button" aria-hidden="true" @onclick="@(() => onCopyClick(model.Data.ToString()))"></i></span>
+                            <span role="button" title="Copy Data"><i class="fa fa-copy fa-3x eventgrid-viewer-blazor-button" aria-hidden="true" @onclick="@(() => onCopyClick(model.Data))"></i></span>
                         </BSCard>
                     </BSCollapse>
                 </BSCard>
