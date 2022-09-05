@@ -10,7 +10,6 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
 using Azure.Messaging.EventGrid;
-using Azure.Messaging.EventGrid.Models;
 using Azure.Messaging.EventGrid.SystemEvents;
 
 namespace Blazor.EventGridViewer.ServerApp.Controllers
@@ -60,9 +59,9 @@ namespace Blazor.EventGridViewer.ServerApp.Controllers
                     {
                         EventGridEvent eventGrid = new EventGridEvent(model.Subject, model.EventType, model.DataVersion, model.EventData);
                         // EventGrid validation message
-                        if (eventGrid.TryGetSystemEventData(out object systemEvent))
+                        if (model.EventType == "SubscriptionValidationEventData")
                         {
-                            var eventData = ((JObject)systemEvent).ToObject<SubscriptionValidationEventData>();
+                            var eventData = ((JObject)(model.EventType)).ToObject<SubscriptionValidationEventData>();
                             var responseData = new SubscriptionValidationResponse()
                             {
                                 ValidationResponse = eventData.ValidationCode

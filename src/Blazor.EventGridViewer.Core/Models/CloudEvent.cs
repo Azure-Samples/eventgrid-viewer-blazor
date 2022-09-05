@@ -22,7 +22,7 @@ namespace Blazor.EventGridViewer.Core.Models
         public string Id { get; set; }
 
         [JsonProperty("time")]
-        public DateTimeOffset Time { get; set; }
+        public string Time { get; set; }
 
         [JsonProperty("data")]
         public object Data { get; set; }

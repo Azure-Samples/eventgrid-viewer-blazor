@@ -1,7 +1,6 @@
 ﻿using Blazor.EventGridViewer.Core.Models;
 using Blazor.EventGridViewer.Services.Adapters;
 using Blazor.EventGridViewer.Services.Interfaces;
-using System;
 using Xunit;
 
 namespace Blazor.EventGridViewer.Unit.Tests
@@ -42,7 +41,7 @@ namespace Blazor.EventGridViewer.Unit.Tests
 
             // Assert
             Assert.True(eventGridEventModel.Id == eventGridViewerEventModel.Id && eventGridEventModel.Subject == eventGridViewerEventModel.Subject &&
-                eventGridEventModel.EventType == eventGridViewerEventModel.EventType && eventGridEventModel.Data == eventGridViewerEventModel.Data.ToString() &&
+                eventGridEventModel.EventType == eventGridViewerEventModel.EventType && eventGridEventModel.Data == eventGridViewerEventModel.Data &&
                 eventGridEventModel.EventTime == eventGridViewerEventModel.EventTime);
         }
     }

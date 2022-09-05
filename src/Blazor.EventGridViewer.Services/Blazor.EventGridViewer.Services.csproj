@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Azure.Messaging.EventGrid" Version="4.10.0" />
+    <PackageReference Include="Azure.Messaging.EventGrid" Version="4.11.0" />
   </ItemGroup>
 
 </Project>

@@ -26,7 +26,7 @@ namespace Blazor.EventGridViewer.Core.Models
         /// <summary>
         /// EventGrid Event Time
         /// </summary>
-        public DateTimeOffset EventTime { get; set; }
+        public string EventTime { get; set; }
         /// <summary>
         /// Unique Id for EventGridViewer Event
         /// </summary>

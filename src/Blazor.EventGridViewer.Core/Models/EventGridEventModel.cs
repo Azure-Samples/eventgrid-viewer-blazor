@@ -26,11 +26,11 @@ namespace Blazor.EventGridViewer.Core.Models
         /// <summary>
         /// EventGrid Data
         /// </summary>
-        public BinaryData EventData { get; set; }
+        public object EventData { get; set; }
         /// <summary>
         /// EventGrid Event Time
         /// </summary>
-        public DateTimeOffset EventTime { get; set; }
+        public string EventTime { get; set; }
         /// <summary>
         /// Data Version
         /// </summary>

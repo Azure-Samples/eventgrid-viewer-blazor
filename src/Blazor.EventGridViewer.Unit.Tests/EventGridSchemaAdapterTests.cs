@@ -45,17 +45,17 @@ namespace Blazor.EventGridViewer.Unit.Tests
             Mock<IEventGridIdentifySchemaService> mockEventGridIdentifySchemaService = new Mock<IEventGridIdentifySchemaService>();
             mockEventGridIdentifySchemaService.Setup(s => s.Identify(json)).Returns(Core.EventGridSchemaType.EventGrid);
             IAdapter<string, List<EventGridEventModel>> adapter = new EventGridSchemaAdapter(mockEventGridIdentifySchemaService.Object);
-            var mockModel = EventGridEvent.ParseMany(new System.BinaryData(json)).FirstOrDefault();
+            var mockModel = JsonConvert.DeserializeObject<List<EventGridEvent>>(json).FirstOrDefault();
 
             // Act
             var model = adapter.Convert(Data.GetMockEventGridEventJson()).FirstOrDefault();
 
             // Assert
             Assert.True(model.Id == mockModel.Id && model.Subject == mockModel.Subject &&
-                model.EventType == mockModel.EventType && model.EventTime == mockModel.EventTime);
+                model.EventType == mockModel.EventType && model.EventTime == mockModel.EventTime.ToString("o"));
 
             var data = JsonConvert.SerializeObject(mockModel, Formatting.Indented);
-            Assert.Equal(data, model.Data.ToString());
+            Assert.Equal(data, model.Data);
         }
 
         /// <summary>
@@ -79,7 +79,7 @@ namespace Blazor.EventGridViewer.Unit.Tests
                 model.EventType == mockModel.Type && model.EventTime == mockModel.Time);
 
             var data = JsonConvert.SerializeObject(mockModel, Formatting.Indented);
-            Assert.Equal(data, model.Data.ToString());
+            Assert.Equal(data, model.Data);
         }
     }
 }

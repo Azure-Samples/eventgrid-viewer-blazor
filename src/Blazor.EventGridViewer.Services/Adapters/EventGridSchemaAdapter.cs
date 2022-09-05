@@ -84,7 +84,7 @@ namespace Blazor.EventGridViewer.Services.Adapters
                     Subject = string.IsNullOrEmpty(eventGridEvent.Subject) ? eventGridEvent.EventType : eventGridEvent.Subject,
                     Data = json,
                     EventData = eventGridEvent.Data,
-                    EventTime = eventGridEvent.EventTime // https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tostring?view=netcore-3.1
+                    EventTime = eventGridEvent.EventTime.ToString("o") // https://docs.microsoft.com/en-us/dotnet/api/system.datetime.tostring?view=netcore-3.1
                 };
                 models.Add(model);
             }
