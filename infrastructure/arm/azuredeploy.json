@@ -140,6 +140,10 @@
             {
               "name": "AzureAd:ClientId",
               "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdClientId'))]"
+            },
+            {
+              "name": "ASPNETCORE_ENVIRONMENT",
+              "value": "Development"
             }
           ]
         }
