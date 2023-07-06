@@ -5,7 +5,7 @@ name: Deploy Dev
 
 on: 
   workflow_run:
-    workflows: ['build']
+    workflows: ['build.yml']
     types:
       - completed
   
