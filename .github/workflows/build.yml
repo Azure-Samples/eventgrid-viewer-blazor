@@ -9,7 +9,7 @@ on:
   
 jobs:
   Dotnet-build:
-    uses: Strongmind/global-build/.github/workflows/dotnet-build.yml@main
+    uses: Strongmind/public-reusable-workflows/.github/workflows/dotnet-build.yml@main
     with: 
       test: true
       project_path: src/Blazor.EventGridViewer.ServerApp/Blazor.EventGridViewer.ServerApp.csproj
