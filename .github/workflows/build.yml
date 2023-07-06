@@ -1,42 +1,17 @@
-###########################################################################################################################
-# Descripton: GitHub Action Workflow used to build the eventgrid-viewer-blazor application.
-###########################################################################################################################
-on:
-    push:
-      branches:
-        - main
-      paths:
-      - 'src/**'
-      - '.github/workflows/build.yml'        
-    pull_request:
-      branches:
-        - main
-      paths:
-      - 'src/**'
-      - '.github/workflows/build.yml'
+name: build
 
-name: 'Build'
-
-env:
-  NET_CORE_VERSION: '3.1.301'
-  CONFIGURATION: 'Release'
-
+on: 
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+  
 jobs:
-  dev-build:
-    name: 'Build'
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: 'Checkout Repository'
-      uses: actions/checkout@master
-
-    - name: 'Use .Net Core ${{ env.NET_CORE_VERSION }}'
-      uses: actions/setup-dotnet@v1
-      with:
-        dotnet-version: ${{ env.NET_CORE_VERSION }}
-
-    - name: 'Build with dotnet'
-      run: dotnet build src/Blazor.EventGridViewer.ServerApp/Blazor.EventGridViewer.ServerApp.csproj -c ${{ env.CONFIGURATION }}
-
-    - name: 'Run Unit Tests'
-      run: dotnet test src/Blazor.EventGridViewer.Unit.Tests/Blazor.EventGridViewer.Unit.Tests.csproj
+  Dotnet-build:
+    uses: Strongmind/public-reusable-workflows/.github/workflows/dotnet-build.yml@main
+    with: 
+      test: true
+      project_path: src/Blazor.EventGridViewer.ServerApp/Blazor.EventGridViewer.ServerApp.csproj
+      project_path_test: src/Blazor.EventGridViewer.Unit.Tests/Blazor.EventGridViewer.Unit.Tests.csproj
+      dotnet-version: 3.1.x
+    secrets: inherit

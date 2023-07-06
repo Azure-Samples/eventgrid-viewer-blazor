@@ -1,0 +1,27 @@
+#Requires vars for AZURE_WEBAPP_NAME_DEV, AZURE_RESOURCE_GROUP, and SLOT_NAME_DEV
+#Also be sure to add AZURE_WEBAPP_PUBLISH_PROFILE_DEV to repository secrets
+
+name: Deploy Dev
+
+on: 
+  workflow_run:
+    workflows: ['build']
+    types:
+      - completed
+  
+jobs:
+  Dotnet-deploy:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    uses: Strongmind/public-reusable-workflows/.github/workflows/deploy-dev-dotnet-webapp.yml@main
+    secrets: inherit
+    
+  velocity-checkin:
+    uses: StrongMind/public-reusable-workflows/.github/workflows/velocityCheckin.yml@main
+    with:
+      sourceEnvironment: dev
+      sourceBranch: ${{ github.ref_name }}
+      sourceRevision: ${{ github.sha }}
+      sourceRepo: ${{ github.server_url }}/${{ github.repository }}
+      sourceVersion: ${{ github.run_id }}.${{ github.run_number }}.${{ github.run_attempt }}
+    secrets:
+      VELOCITY_DEPLOYMENT_TOKEN: ${{ secrets.VELOCITY_DEPLOYMENT_TOKEN }}     
