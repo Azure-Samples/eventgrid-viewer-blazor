@@ -17,7 +17,7 @@ jobs:
       - name: Download workflow artifact
         uses: dawidd6/action-download-artifact@v2.24.0
         with: 
-          workflow: dotnet-build.yml 
+          workflow: build.yml 
           workflow_conclusion: success
           check_artifacts: true
           search_artifacts: true
