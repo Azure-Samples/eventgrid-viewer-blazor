@@ -12,8 +12,24 @@ on:
 jobs:
   Dotnet-deploy:
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
-    uses: Strongmind/public-reusable-workflows/.github/workflows/deploy-dev-dotnet-webapp.yml@main
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download workflow artifact
+        uses: dawidd6/action-download-artifact@v2.24.0
+        with: 
+          workflow: dotnet-build.yml 
+          workflow_conclusion: success
+          check_artifacts: true
+          search_artifacts: true
+      - uses: azure/login@v1
+        with:
+          creds: '{"clientId":"${{ secrets.AZURE_CLIENT_ID }}","clientSecret":"${{ secrets.AZURE_CLIENT_SECRET }}","tenantId":"${{ secrets.AZURE_TENANT_ID }}","subscriptionId":"${{ secrets.AZURE_SUBSCRIPTION_ID }}"}'
+      - name: 'Azure WebApp Deploy'
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: ${{ vars.AZURE_WEBAPP_NAME_DEV }}
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE_DEV }}
+          package: '.'
     
   velocity-checkin:
     uses: StrongMind/public-reusable-workflows/.github/workflows/velocityCheckin.yml@main
