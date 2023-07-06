@@ -14,4 +14,5 @@ jobs:
       test: true
       project_path: src/Blazor.EventGridViewer.ServerApp/Blazor.EventGridViewer.ServerApp.csproj
       project_path_test: src/Blazor.EventGridViewer.Unit.Tests/Blazor.EventGridViewer.Unit.Tests.csproj
+      dotnet-version: 3.1.x
     secrets: inherit
