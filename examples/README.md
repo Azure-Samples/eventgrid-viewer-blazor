@@ -22,6 +22,10 @@ The information inside of EventGrid messages can contain sensitive information. 
 
 EventGrid Viewer Blazor will use a [Azure Keyvault](https://azure.microsoft.com/en-us/services/key-vault/) Secret, [Azure AD App Registration](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-how-applications-are-added) & a [System-assigned managed Identity](https://docs.microsoft.com/en-us/azure/active-directory/managed-identities-azure-resources/overview) to secure the application.
 
+**Notes:**
+1. This tutorial assumes that the Azure KeyVault uses Role-Based Access Control (RBAC)
+1. If using the *configure-auth.sh* script (discussed below), the user executing the script must have rights to assign roles and set KeyVault secrets.  See official Microsoft KeyVault rbac documentation [here](https://learn.microsoft.com/en-us/azure/key-vault/general/rbac-guide?tabs=azure-cli)
+
 **EventGrid Viewer Blazor Azure AD Appsettings:**
 
 1. AzureAd:Instance - hardcoded in the ARM Template, value is ```https://login.microsoftonline.com/```

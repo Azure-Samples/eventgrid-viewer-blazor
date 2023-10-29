@@ -36,15 +36,6 @@ function print() {
     echo "$1"
 }
 
-###############################################################
-#- function used to create a random password
-###############################################################
-function generateRandomPassword() {
-    local password=$(openssl rand -base64 16 | colrm 17 | sed 's/$/!/')
-
-    echo "#$password!2"
-}
-
 parent_path=$(
     cd "$(dirname "${BASH_SOURCE[0]}")"
     pwd -P
@@ -96,28 +87,26 @@ az account set -s $subscription
 # get configuration values
 managedIdentityPrincipalId=$(az webapp identity assign -n $siteName -g $resourceGroup --query 'principalId' -o tsv)
 signedInUserPrincipalName=$(az ad signed-in-user show --query 'userPrincipalName' -o tsv)
-secret=$(generateRandomPassword)
 
-# create app registration
-print "Creating app registration for $siteName"
+# create app registration - https://learn.microsoft.com/en-us/cli/azure/microsoft-graph-migration
+print "Creating app registration for $siteName..."
 appId=$(az ad app create --display-name $siteName \
-    --identifier-uris https://$siteName.azurewebsites.net \
-    --reply-urls https://$siteName.azurewebsites.net/signin-oidc \
-    --password $secret \
+    --web-redirect-uris https://$siteName.azurewebsites.net/signin-oidc \
     --required-resource-accesses @configure-auth-manifest.json \
     --query 'appId' -o tsv)
 
-# set access policies
-print "Setting the keyvault access policies"
-az keyvault set-policy --name $keyvaultName --upn $signedInUserPrincipalName --secret-permissions set get list delete -o none
-az keyvault set-policy --name $keyvaultName --object-id $managedIdentityPrincipalId --secret-permissions set get list -o none
+# assign rbac role to app service managed identity - https://learn.microsoft.com/en-us/entra/identity/managed-identities-azure-resources/howto-assign-access-cli
+print "Assigning rbac role to app service to access KeyVault..."
+az role assignment create --assignee $managedIdentityPrincipalId \
+    --role 'Key Vault Secrets User' \
+    --scope "//subscriptions/$subscription/resourceGroups/$resourceGroup/providers/Microsoft.KeyVault/vaults/$keyvaultName"
 
 # setting keyvault secrets
-print "Setting keyvault secrets"
+print "Setting keyvault secrets..."
 az keyvault secret set --vault-name $keyvaultName -n 'sct-egvb-azad-client-id' --value $appId -o none
 
 # restart the app
-print "Stopping and starting the app"
+print "Stopping and starting the app..."
 az webapp stop -n $siteName -g $resourceGroup -o none
 az webapp start -n $siteName -g $resourceGroup -o none
 
@@ -125,6 +114,5 @@ az webapp start -n $siteName -g $resourceGroup -o none
 print "#######################---OUTPUT---##################################"
 print "Signed-In User: $signedInUserPrincipalName"
 print "Managed Identity: $managedIdentityPrincipalId"
-print "App Registration Secret: $secret"
 print "App Registration AppId: $appId"
 print "#####################################################################"

@@ -83,7 +83,7 @@
     "azAdCallbackPath": "/signin-oidc",
     "azAdClientIdSecretName": "sct-egvb-azad-client-id",
     "azAdClientId": "[concat('@Microsoft.KeyVault(SecretUri=https://', parameters('keyvaultName'), '.vault.azure.net/secrets/', variables('azAdClientIdSecretName'), '/)')]",
-    "netFrameworkVersion": "v5.0"
+    "netFrameworkVersion": "v6.0"
   },
   "resources": [
     {

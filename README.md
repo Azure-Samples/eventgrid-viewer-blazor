@@ -32,7 +32,7 @@ Building upon some of the ideas of the [azure-event-grid-viewer](https://github.
 
 To quickly deploy the EventGrid Viewer Blazor application to Azure, hit the button below *(for examples on how to deploy with Azure AD authentication, see the [examples section](#examples))*:
 
-[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Feventgrid-viewer-blazor%2Fmain%2Finfrastructure%2Farm%2Fazuredeploy.json)
+[![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Feventgrid-viewer-blazor%2Fmichaeldeongreen%2Fdotnet6-upgrade%2Finfrastructure%2Farm%2Fazuredeploy_new.json)
 
 You will be presented with a screen similar to the image below:
 
