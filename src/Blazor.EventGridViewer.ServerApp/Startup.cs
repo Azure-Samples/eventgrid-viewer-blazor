@@ -6,7 +6,7 @@ using Microsoft.Extensions.Hosting;
 using BlazorStrap;
 using Blazor.EventGridViewer.Services.Interfaces;
 using Blazor.EventGridViewer.Services;
-using Microsoft.AspNetCore.Authentication.AzureAD.UI;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.AspNetCore.Authentication;
@@ -33,8 +33,11 @@ namespace Blazor.EventGridViewer.ServerApp
             // Check to see if AzureAD Auth is enabled
             if (EnableAuth())
             {
-                services.AddAuthentication(AzureADDefaults.AuthenticationScheme)
-                   .AddAzureAD(options => Configuration.Bind("AzureAd", options));
+                services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
+                   .AddOpenIdConnect(options => 
+                   {
+                       Configuration.Bind("AzureAd", options);
+                   });
 
                 services.AddControllersWithViews(options =>
                 {
@@ -47,7 +50,7 @@ namespace Blazor.EventGridViewer.ServerApp
 
             services.AddRazorPages();
             services.AddServerSideBlazor();
-            services.AddBootstrapCss();
+            services.AddBlazorStrap();
             services.AddScoped<IEventGridIdentifySchemaService, EventGridIdentifySchemaService>();
             services.AddScoped<IAdapter<string, List<EventGridEventModel>>, EventGridSchemaAdapter>();
             services.AddSingleton<IAdapter<EventGridEventModel, EventGridViewerEventModel>, EventGridEventModelAdapter>();

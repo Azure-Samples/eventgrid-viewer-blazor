@@ -1,10 +1,10 @@
-﻿using Blazor.EventGridViewer.Core.Models;
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Blazor.EventGridViewer.Core.Models;
 using Blazor.EventGridViewer.Services.Interfaces;
 using Microsoft.AspNetCore.Components;
 using Microsoft.JSInterop;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Blazor.EventGridViewer.ServerApp.Pages
 {
@@ -18,15 +18,29 @@ namespace Blazor.EventGridViewer.ServerApp.Pages
         [Inject]
         private IJSRuntime _jsRuntime { get; set; }
 
-        private List<EventGridViewerEventModel> Models => _eventGridViewerService.Models;
+        private readonly object _modelsLock = new object();
+        private List<EventGridViewerEventModel> _models = new List<EventGridViewerEventModel>();
+        private List<EventGridViewerEventModel> Models
+        {
+            get
+            {
+                lock (_modelsLock)
+                {
+                    return new List<EventGridViewerEventModel>(_models);
+                }
+            }
+        }
 
         /// <summary>
         /// Implement Dispose
         /// </summary>
         public void Dispose()
         {
-            _eventGridViewerService.RemoveAllRequested -= RemoveAllRequestedHandler;
-            _eventGridViewerService.EventReceived -= EventReceivedHandler;
+            if (_eventGridViewerService != null)
+            {
+                _eventGridViewerService.RemoveAllRequested -= RemoveAllRequestedHandler;
+                _eventGridViewerService.EventReceived -= EventReceivedHandler;
+            }
         }
 
         /// <summary>
@@ -34,7 +48,7 @@ namespace Blazor.EventGridViewer.ServerApp.Pages
         /// </summary>
         private void RemoveAll()
         {
-            _eventGridViewerService.RaiseRemoveAllRequestedEvent();
+            _eventGridViewerService?.RaiseRemoveAllRequestedEvent();
         }
 
         /// <summary>
@@ -64,8 +78,21 @@ namespace Blazor.EventGridViewer.ServerApp.Pages
         protected override void OnInitialized()
         {
             base.OnInitialized();
-            _eventGridViewerService.RemoveAllRequested += RemoveAllRequestedHandler;
-            _eventGridViewerService.EventReceived += EventReceivedHandler;
+
+            if (_eventGridViewerService != null)
+            {
+                // Initialize local copy with current models (with null check)
+                lock (_modelsLock)
+                {
+                    if (_eventGridViewerService.Models != null)
+                    {
+                        _models.AddRange(_eventGridViewerService.Models);
+                    }
+                }
+
+                _eventGridViewerService.RemoveAllRequested += RemoveAllRequestedHandler;
+                _eventGridViewerService.EventReceived += EventReceivedHandler;
+            }
         }
 
         /// <summary>
@@ -75,6 +102,15 @@ namespace Blazor.EventGridViewer.ServerApp.Pages
         /// <param name="e"></param>
         private void EventReceivedHandler(object sender, EventArgs e)
         {
+            // Update local collection safely with thread-safe operations
+            lock (_modelsLock)
+            {
+                if (_eventGridViewerService?.Models != null)
+                {
+                    _models.Clear();
+                    _models.AddRange(_eventGridViewerService.Models);
+                }
+            }
             InvokeAsync(StateHasChanged);
         }
 
@@ -85,6 +121,11 @@ namespace Blazor.EventGridViewer.ServerApp.Pages
         /// <param name="e"></param>
         private void RemoveAllRequestedHandler(object sender, EventArgs e)
         {
+            // Clear local collection safely with thread synchronization
+            lock (_modelsLock)
+            {
+                _models.Clear();
+            }
             InvokeAsync(StateHasChanged);
         }
     }

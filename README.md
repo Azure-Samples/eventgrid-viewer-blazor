@@ -11,7 +11,7 @@ urlFragment: eventgrid-viewer-blazor
 
 # EventGrid Viewer Blazor application
 
-The EventGrid Viewer Blazor application can be used to view Azure EventGrid messages in realtime using ASP.Net Core Blazor and SignalR.  For those who would like to secure the application, the EventGrid Viewer Blazor application can be easily configured via appsettings to use Azure AD authentication, Azure KeyVault & Managed Identities.
+The EventGrid Viewer Blazor application can be used to view Azure EventGrid messages in realtime using ASP.Net Core Blazor and SignalR.  For those who would like to secure the application, the EventGrid Viewer Blazor application can be easily configured via appsettings to use Entra ID authentication, Azure KeyVault & Managed Identities.
 
 ![Build](https://github.com/Azure-Samples/eventgrid-viewer-blazor/workflows/Build/badge.svg)
 
@@ -22,7 +22,7 @@ Building upon some of the ideas of the [azure-event-grid-viewer](https://github.
 1. View all Azure EventGrid messages in json format
 1. View formatted & highlighted json
 1. Copy json messages to the clipboard
-1. Enable Azure AD authentication to secure the application
+1. Enable Entra ID authentication to secure the application
 
 ## Screenshot
 
@@ -30,7 +30,7 @@ Building upon some of the ideas of the [azure-event-grid-viewer](https://github.
 
 ## Usage
 
-To quickly deploy the EventGrid Viewer Blazor application to Azure, hit the button below *(for examples on how to deploy with Azure AD authentication, see the [examples section](#examples))*:
+To quickly deploy the EventGrid Viewer Blazor application to Azure, hit the button below *(for examples on how to deploy with Entra ID authentication, see the [examples section](#examples))*:
 
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Feventgrid-viewer-blazor%2Fmain%2Finfrastructure%2Farm%2Fazuredeploy.json)
 

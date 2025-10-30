@@ -32,9 +32,9 @@ The *azuredeploy* script uses the *azuredeploy.json* ARM Template to deploy reso
 - l - Location - Azure location ie eastus, westus (required)
 - r - Repo url - The git repository where the codebase is located ie ```https://github.com/Azure-Samples/eventgrid-viewer-blazor.git``` (required)
 - b - Repo branch - The git repository branch to use ie main (required)
-- a - Enable auth - The flag to enable Azure AD authentication.  Default is false (optional)
-- k - Keyvault name - The name of the Azure Keyvault to store Azure AD secrets if enabling authentication.  Default is none (optional)
-- d - Azure AD domain - The Azure AD Primary Domain if enabling authentication ie ```{youraccount}.onmicrosoft.com```.  Default is none (optional)
+- a - Enable auth - The flag to enable Entra ID authentication.  Default is false (optional)
+- k - Keyvault name - The name of the Azure Keyvault to store Entra ID secrets if enabling authentication.  Default is none (optional)
+- d - Entra ID domain - The Entra ID Primary Domain if enabling authentication ie ```{youraccount}.onmicrosoft.com```.  Default is none (optional)
 - h - Help - Help (optional)
 
 **Sample Usage:**

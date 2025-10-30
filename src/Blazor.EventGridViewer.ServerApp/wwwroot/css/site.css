@@ -1,3 +1,4 @@
+/* Force refresh - EventGrid Viewer Blazor Styles */
 @import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
@@ -52,10 +53,31 @@ app {
 
     .sidebar .top-row {
         background-color: rgba(0,0,0,0.4);
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .sidebar .navbar-brand {
         font-size: 1.1rem;
+        color: white !important;
+        font-weight: bold;
+        text-decoration: none !important;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        white-space: normal;
+    }
+
+    .sidebar .navbar-brand i {
+        margin-left: 0.25rem;
+    }
+
+    .sidebar .navbar-brand:hover {
+        color: white !important;
+        text-decoration: none !important;
     }
 
     .sidebar .oi {
@@ -68,6 +90,12 @@ app {
     .sidebar .nav-item {
         font-size: 0.9rem;
         padding-bottom: 0.5rem;
+    }
+
+    .sidebar .nav.flex-column {
+        list-style: none;
+        padding-left: 0;
+        margin: 0;
     }
 
         .sidebar .nav-item:first-of-type {
@@ -85,6 +113,7 @@ app {
             display: flex;
             align-items: center;
             line-height: 3rem;
+            margin-left: 8px;
         }
 
             .sidebar .nav-item a.active {
@@ -184,13 +213,72 @@ app {
 
 .eventgrid-viewer-blazor-title {
     font-size: 175%;
-    font-weight: bold
+    font-weight: bold;
+}
+
+/* Header row styling */
+.eventgrid-header-row {
+    align-items: center;
+    min-height: 60px;
+}
+
+.eventgrid-header-row .col-8 {
+    display: flex;
+    align-items: center;
 }
 
 .fa {
-    color: #008AD7
+    color: #008AD7;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.fa:hover {
+    color: #021d45;
+}
+
+.eventgrid-viewer-blazor-button {
+    transition: transform 0.1s ease;
+    display: inline-block;
+    padding: 5px;
+}
+
+.trash-icon-spacing {
+    margin-left: 40px;
+    display: inline-block;
+}
+
+.eventgrid-viewer-blazor-button:hover {
+    transform: scale(1.05);
 }
 
 .eventgrid-viewer-blazor-button:active {
     color: #021d45;
+}
+
+/* Fix for BlazorStrap v5 accordion spacing */
+.accordion .card {
+    margin-bottom: 1rem;
+}
+
+.accordion .card:last-child {
+    margin-bottom: 0;
+}
+
+/* Ensure code blocks display properly */
+pre code {
+    background: #f5f2f0;
+    border-radius: 4px;
+    overflow-x: auto;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Make buttons more interactive */
+.eventgrid-viewer-blazor-button {
+    transition: transform 0.1s ease;
+}
+
+.eventgrid-viewer-blazor-button:hover {
+    transform: scale(1.05);
 }

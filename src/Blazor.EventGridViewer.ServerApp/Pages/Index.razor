@@ -3,35 +3,55 @@
 
 
 <div class="container">
-    <div class="row">
-        <div class="col-8">
-            <span class="eventgrid-viewer-blazor-title"><img src="images/eventgrid.png" height="47" width="90" alt="Azure Event Grid">EventGrid Viewer <i>Blazor</i></span>
-        </div>
-        <div class="col-4">
-            <span role="button" title="Clear Screen"><i class="fa fa-trash fa-3x eventgrid-viewer-blazor-button" aria-hidden="true" @onclick="RemoveAll"></i></span>
+    <div class="row eventgrid-header-row">
+        <div class="col-12 d-flex align-items-center">
+            <span class="eventgrid-viewer-blazor-title">
+                <img src="images/eventgrid.png" height="47" width="90" alt="Azure Event Grid">EventGrid Viewer <i>Blazor</i>
+            </span>
+            <span role="button" title="Clear Screen" class="trash-icon-spacing">
+                <i class="fa fa-trash fa-3x eventgrid-viewer-blazor-button" aria-hidden="true" @onclick="RemoveAll"></i>
+            </span>
         </div>
     </div>
 </div>
 
 <hr class="mt-5 mb-5" />
 
-<div class="accordion">
-    <BSCollapseGroup>
+<div class="accordion" id="eventGridAccordion">
+    @if (Models != null)
+    {
         @foreach (var model in Models)
         {
-            <BSCollapseItem @key="@model.EventGridViewerEventId">
-                <BSCard CardType="CardType.Card">
-                    <BSCard CardType="CardType.Header">
-                        <BSCollapseToggle IsLink="true">@model.EventType - @model.Subject</BSCollapseToggle>
+            <BSAccordion @key="@model.EventGridViewerEventId">
+                <BSAccordionItem>
+                    <Content>
+                    <BSCard>
+                        <BSCardHeader>
+                            <BSButton Color="BSColor.Light" 
+                                      DataBSTarget="@($"#collapse-{model.EventGridViewerEventId}")"
+                                      DataBSToggle="collapse"
+                                      Class="text-start w-100">
+                                @model.EventType - @model.Subject
+                            </BSButton>
+                        </BSCardHeader>
+                        <BSCollapse Id="@($"collapse-{model.EventGridViewerEventId}")">
+                            <BSCardBody>
+                                <BSCardText>
+                                    <pre><code class="language-json">@model.Data</code></pre>
+                                </BSCardText>
+                                <div class="mt-3">
+                                    <span role="button" title="Copy Data">
+                                        <i class="fa fa-copy fa-3x eventgrid-viewer-blazor-button" 
+                                           aria-hidden="true" 
+                                           @onclick="@(() => onCopyClick(model.Data))"></i>
+                                    </span>
+                                </div>
+                            </BSCardBody>
+                        </BSCollapse>
                     </BSCard>
-                    <BSCollapse>
-                        <BSCard CardType="CardType.Body">
-                            <BSCard CardType="CardType.Text"><pre><code class="language-json">@model.Data</code></pre></BSCard>
-                            <span role="button" title="Copy Data"><i class="fa fa-copy fa-3x eventgrid-viewer-blazor-button" aria-hidden="true" @onclick="@(() => onCopyClick(model.Data))"></i></span>
-                        </BSCard>
-                    </BSCollapse>
-                </BSCard>
-            </BSCollapseItem>
+                </Content>
+            </BSAccordionItem>
+        </BSAccordion>
         }
-    </BSCollapseGroup>
+    }
 </div>

@@ -1,0 +1,76 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Blazor App",
+            "type": "coreclr",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/Blazor.EventGridViewer.ServerApp/bin/Debug/net9.0/Blazor.EventGridViewer.ServerApp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Blazor.EventGridViewer.ServerApp",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug with Build",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/src/Blazor.EventGridViewer.ServerApp/bin/Debug/net9.0/Blazor.EventGridViewer.ServerApp.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/src/Blazor.EventGridViewer.ServerApp",
+            "env": {
+                "ASPNETCORE_ENVIRONMENT": "Development"
+            },
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Debug Unit Tests",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "test-build",
+            "program": "dotnet",
+            "args": [
+                "test",
+                "${workspaceFolder}/src/Blazor.EventGridViewer.Unit.Tests",
+                "--no-build",
+                "--verbosity=normal"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Debug Specific Test",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "test-build",
+            "program": "dotnet",
+            "args": [
+                "test",
+                "${workspaceFolder}/src/Blazor.EventGridViewer.Unit.Tests",
+                "--no-build",
+                "--verbosity=normal",
+                "--filter=${input:testFilter}"
+            ],
+            "cwd": "${workspaceFolder}",
+            "console": "integratedTerminal",
+            "stopAtEntry": false
+        },
+        {
+            "name": "Attach to Process",
+            "type": "coreclr",
+            "request": "attach"
+        }
+    ],
+    "inputs": [
+        {
+            "id": "testFilter",
+            "description": "Test filter (e.g., method name, class name)",
+            "default": "EventGridEventModelAdapterTests",
+            "type": "promptString"
+        }
+    ]
+}
