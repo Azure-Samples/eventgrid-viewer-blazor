@@ -1,0 +1,42 @@
+{
+    "dotnet.defaultSolution": "src/Blazor.EventGridViewer.sln",
+    "omnisharp.enableRoslynAnalyzers": true,
+    "omnisharp.enableEditorConfigSupport": true,
+    "omnisharp.enableAsyncCompletion": true,
+    "files.exclude": {
+        "**/bin": true,
+        "**/obj": true,
+        "**/.vs": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/bower_components": true,
+        "**/bin": true,
+        "**/obj": true,
+        "**/.vs": true
+    },
+    "files.associations": {
+        "*.razor": "razor"
+    },
+    "emmet.includeLanguages": {
+        "razor": "html"
+    },
+    "[csharp]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "[razor]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "ms-dotnettools.csharp"
+    },
+    "[json]": {
+        "editor.formatOnSave": true
+    },
+    "editor.minimap.enabled": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "dotnet.completion.showCompletionItemsFromUnimportedNamespaces": true,
+    "dotnet.formatting.organizeImportsOnFormat": true
+}

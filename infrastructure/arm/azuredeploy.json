@@ -22,11 +22,31 @@
         "B1",
         "B2",
         "B3",
-        "S1"
+        "S1",
+        "S2",
+        "S3",
+        "P1",
+        "P2",
+        "P3",
+        "P1V2",
+        "P2V2",
+        "P3V2",
+        "P1V3",
+        "P2V3",
+        "P3V3",
+        "EP1",
+        "EP2",
+        "EP3",
+        "I1",
+        "I2",
+        "I3",
+        "I1V2",
+        "I2V2",
+        "I3V2"
       ],
       "defaultValue": "F1",
       "metadata": {
-        "description": "The pricing tier for the hosting plan."
+        "description": "The pricing tier for the hosting plan. Options include Free (F1), Shared (D1), Basic (B1-B3), Standard (S1-S3), Premium (P1-P3), Premium V2 (P1V2-P3V2), Premium V3 (P1V3-P3V3), Elastic Premium (EP1-EP3), and Isolated (I1-I3, I1V2-I3V2)."
       }
     },
     "repoURL": {
@@ -81,9 +101,10 @@
     "azAdTenantId": "[subscription().tenantId]",
     "azAdInstance": "https://login.microsoftonline.com/",
     "azAdCallbackPath": "/signin-oidc",
+    "azAdSignedOutCallbackPath": "/signout-callback-oidc",
     "azAdClientIdSecretName": "sct-egvb-azad-client-id",
     "azAdClientId": "[concat('@Microsoft.KeyVault(SecretUri=https://', parameters('keyvaultName'), '.vault.azure.net/secrets/', variables('azAdClientIdSecretName'), '/)')]",
-    "netFrameworkVersion": "v5.0"
+    "netFrameworkVersion": "v9.0"
   },
   "resources": [
     {
@@ -132,6 +153,10 @@
             {
               "name": "AzureAd:CallbackPath",
               "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdCallbackPath'))]"
+            },
+            {
+              "name": "AzureAd:SignedOutCallbackPath",
+              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdSignedOutCallbackPath'))]"
             },
             {
               "name": "AzureAd:Domain",

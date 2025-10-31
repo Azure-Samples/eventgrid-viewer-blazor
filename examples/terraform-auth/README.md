@@ -29,7 +29,7 @@ Instructions:
    - A app service plan name
    - A web app name
    - A keyvault name
-   - A azure ad domain
+   - A entra id domain
 1. Run the following bash commands in order:
 
 ```bash
@@ -55,7 +55,7 @@ Instructions:
     terraform apply
 ```
 
-1. Once the application has been deployed, configure Azure AD authentication by running the following:
+1. Once the application has been deployed, configure Entra ID authentication by running the following:
 
 ```bash
     ./configure-auth.sh -s $AZURE_SUBSCRIPTION_ID -g $TF_VAR_resource_group_name -a $TF_VAR_web_app_name -k $TF_VAR_key_vault_name

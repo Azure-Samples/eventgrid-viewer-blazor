@@ -1,6 +1,6 @@
 # Overview
 
-The purpose of this document is to demonstrate how to configure the EventGrid Viewer Blazor application with Azure AD authentication using bash, once the application has been deployed.  You could use the bash script as part of an automated process.
+The purpose of this document is to demonstrate how to configure the EventGrid Viewer Blazor application with Entra ID authentication using bash, once the application has been deployed.  You could use the bash script as part of an automated process.
 
 ## Prerequisites
 
@@ -28,7 +28,7 @@ Do the following:
 1. Enter a Hosting Plan Name
 1. Enable Auth
 1. Enter a Keyvault Name
-1. Enter a Azure AD Domain ie {youraccount}.onmicrosoft.com
+1. Enter a Entra ID Domain ie {youraccount}.onmicrosoft.com
 1. Hit the *Review + Create* button to validate & deploy the EventGrid Viewer Blazor application
 
 After the application is deployed:
