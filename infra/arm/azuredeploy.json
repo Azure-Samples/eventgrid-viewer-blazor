@@ -69,44 +69,48 @@
       "metadata": {
         "description": "Location for all resources."
       }
-    },
-    "enableAuth": {
-      "type": "string",
-      "allowedValues": [
-        "false",
-        "true"
-      ],
-      "defaultValue": "false",
-      "metadata": {
-        "description": "Determines if Azure AD authentication will be enabled."
-      }
-    },
-    "keyvaultName": {
-      "type": "string",
-      "defaultValue": "none",
-      "metadata": {
-        "description": "The name of the Azure Keyvault to store secrets if enabling authentication."
-      }
-    },
-    "azAdDomain": {
-      "type": "string",
-      "defaultValue": "none",
-      "metadata": {
-        "description": "The Azure AD Primary domain if enabling authentication ie youraccount.onmicrosoft.com."
-      }
     }
   },
   "variables": {
     "projectFile": "src/Blazor.EventGridViewer.ServerApp/Blazor.EventGridViewer.ServerApp.csproj",
-    "azAdTenantId": "[subscription().tenantId]",
-    "azAdInstance": "https://login.microsoftonline.com/",
-    "azAdCallbackPath": "/signin-oidc",
-    "azAdSignedOutCallbackPath": "/signout-callback-oidc",
-    "azAdClientIdSecretName": "sct-egvb-azad-client-id",
-    "azAdClientId": "[concat('@Microsoft.KeyVault(SecretUri=https://', parameters('keyvaultName'), '.vault.azure.net/secrets/', variables('azAdClientIdSecretName'), '/)')]",
-    "netFrameworkVersion": "v9.0"
+    "netFrameworkVersion": "v9.0",
+    "logAnalyticsWorkspaceName": "[concat('law-', parameters('siteName'))]",
+    "applicationInsightsName": "[concat('ai-', parameters('siteName'))]"
   },
   "resources": [
+    {
+      "type": "Microsoft.OperationalInsights/workspaces",
+      "apiVersion": "2022-10-01",
+      "name": "[variables('logAnalyticsWorkspaceName')]",
+      "location": "[parameters('location')]",
+      "properties": {
+        "sku": {
+          "name": "PerGB2018"
+        },
+        "retentionInDays": 30,
+        "features": {
+          "enableLogAccessUsingOnlyResourcePermissions": true
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Insights/components",
+      "apiVersion": "2020-02-02",
+      "name": "[variables('applicationInsightsName')]",
+      "location": "[parameters('location')]",
+      "kind": "web",
+      "dependsOn": [
+        "[resourceId('Microsoft.OperationalInsights/workspaces', variables('logAnalyticsWorkspaceName'))]"
+      ],
+      "properties": {
+        "Application_Type": "web",
+        "WorkspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', variables('logAnalyticsWorkspaceName'))]",
+        "SamplingPercentage": 5,
+        "RetentionInDays": 90,
+        "DisableIpMasking": false,
+        "DisableLocalAuth": false
+      }
+    },
     {
       "apiVersion": "2015-08-01",
       "name": "[parameters('hostingPlanName')]",
@@ -126,7 +130,8 @@
       "type": "Microsoft.Web/sites",
       "location": "[parameters('location')]",
       "dependsOn": [
-        "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
+        "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
+        "[resourceId('Microsoft.Insights/components', variables('applicationInsightsName'))]"
       ],
       "properties": {
         "serverFarmId": "[parameters('hostingPlanName')]",
@@ -139,32 +144,16 @@
               "value": "[variables('projectFile')]"
             },
             {
-              "name": "EnableAuth",
-              "value": "[parameters('enableAuth')]"
+              "name": "ASPNETCORE_ENVIRONMENT",
+              "value": "Production"
             },
             {
-              "name": "AzureAd:TenantId",
-              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdTenantId'))]"
+              "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+              "value": "[reference(resourceId('Microsoft.Insights/components', variables('applicationInsightsName')), '2020-02-02').ConnectionString]"
             },
             {
-              "name": "AzureAd:Instance",
-              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdInstance'))]"
-            },
-            {
-              "name": "AzureAd:CallbackPath",
-              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdCallbackPath'))]"
-            },
-            {
-              "name": "AzureAd:SignedOutCallbackPath",
-              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdSignedOutCallbackPath'))]"
-            },
-            {
-              "name": "AzureAd:Domain",
-              "value": "[if(equals(parameters('enableAuth'), 'false'), '', parameters('azAdDomain'))]"
-            },
-            {
-              "name": "AzureAd:ClientId",
-              "value": "[if(equals(parameters('enableAuth'), 'false'), '', variables('azAdClientId'))]"
+              "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+              "value": "[reference(resourceId('Microsoft.Insights/components', variables('applicationInsightsName')), '2020-02-02').InstrumentationKey]"
             }
           ]
         }
@@ -185,5 +174,27 @@
         }
       ]
     }
-  ]
+  ],
+  "outputs": {
+    "webAppUrl": {
+      "type": "string",
+      "value": "[concat('https://', reference(resourceId('Microsoft.Web/sites', parameters('siteName'))).defaultHostName)]"
+    },
+    "applicationInsightsName": {
+      "type": "string",
+      "value": "[variables('applicationInsightsName')]"
+    },
+    "applicationInsightsInstrumentationKey": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Insights/components', variables('applicationInsightsName')), '2020-02-02').InstrumentationKey]"
+    },
+    "applicationInsightsConnectionString": {
+      "type": "string",
+      "value": "[reference(resourceId('Microsoft.Insights/components', variables('applicationInsightsName')), '2020-02-02').ConnectionString]"
+    },
+    "logAnalyticsWorkspaceName": {
+      "type": "string",
+      "value": "[variables('logAnalyticsWorkspaceName')]"
+    }
+  }
 }

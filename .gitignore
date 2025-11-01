@@ -352,3 +352,11 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Azure Developer CLI environment files
+.azdo/.env
+.env
+*.env.local
+
+# Azure CLI cache
+.azure/
