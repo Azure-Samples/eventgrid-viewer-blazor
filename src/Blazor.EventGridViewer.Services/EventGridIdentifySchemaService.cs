@@ -1,7 +1,8 @@
-﻿using Blazor.EventGridViewer.Core;
+﻿using System;
+using Blazor.EventGridViewer.Core;
 using Blazor.EventGridViewer.Services.Interfaces;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using System;
 
 namespace Blazor.EventGridViewer.Services
 {
@@ -39,9 +40,10 @@ namespace Blazor.EventGridViewer.Services
                 var version = eventData["specversion"].Value<string>();
                 if (!string.IsNullOrEmpty(version)) return true;
             }
-            catch (Exception e)
+            catch (JsonReaderException)
             {
-                Console.WriteLine(e);
+                // Expected when parsing EventGrid events (which come as arrays)
+                // This is not an error - just means it's not a CloudEvent
             }
 
             return false;

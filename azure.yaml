@@ -1,0 +1,31 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/Azure/azure-dev/main/schemas/v1.0/azure.yaml.json
+
+name: eventgrid-viewer-blazor
+metadata:
+  template: eventgrid-viewer-blazor@0.0.1-beta
+  
+infra:
+  provider: bicep
+  path: infra
+
+services:
+  web:
+    project: ./src/Blazor.EventGridViewer.ServerApp
+    language: dotnet
+    host: appservice
+
+pipeline:
+  provider: github
+
+hooks:
+  prebuild:
+    shell: sh
+    run: |
+      echo "Building .NET application..."
+      
+  postdeploy:
+    shell: sh
+    run: |
+      echo "EventGrid Viewer Blazor deployed successfully!"
+      echo "Application URL: $WEB_APP_URL"
+      echo "Webhook endpoint: $WEB_APP_URL/api/eventgrid"

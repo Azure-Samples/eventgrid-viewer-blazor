@@ -1,0 +1,638 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "metadata": {
+    "_generator": {
+      "name": "bicep",
+      "version": "0.38.33.27573",
+      "templateHash": "17377841943328396753"
+    },
+    "name": "EventGrid Viewer Blazor",
+    "description": "EventGrid Viewer Blazor application infrastructure",
+    "author": "Azure Samples"
+  },
+  "parameters": {
+    "siteName": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 50,
+      "metadata": {
+        "description": "The azure web app name."
+      }
+    },
+    "hostingPlanName": {
+      "type": "string",
+      "minLength": 2,
+      "maxLength": 50,
+      "metadata": {
+        "description": "The azure web hosting plan name."
+      }
+    },
+    "sku": {
+      "type": "string",
+      "defaultValue": "F1",
+      "allowedValues": [
+        "F1",
+        "D1",
+        "B1",
+        "B2",
+        "B3",
+        "S1",
+        "S2",
+        "S3",
+        "P1",
+        "P2",
+        "P3",
+        "P1V2",
+        "P2V2",
+        "P3V2",
+        "P1V3",
+        "P2V3",
+        "P3V3",
+        "EP1",
+        "EP2",
+        "EP3",
+        "I1",
+        "I2",
+        "I3",
+        "I1V2",
+        "I2V2",
+        "I3V2"
+      ],
+      "metadata": {
+        "description": "The pricing tier for the hosting plan."
+      }
+    },
+    "repoURL": {
+      "type": "string",
+      "defaultValue": "https://github.com/Azure-Samples/eventgrid-viewer-blazor.git",
+      "metadata": {
+        "description": "The URL for the GitHub repository that contains the project to deploy."
+      }
+    },
+    "branch": {
+      "type": "string",
+      "defaultValue": "main",
+      "metadata": {
+        "description": "The branch of the GitHub repository to use."
+      }
+    },
+    "location": {
+      "type": "string",
+      "defaultValue": "[resourceGroup().location]",
+      "metadata": {
+        "description": "Location for all resources."
+      }
+    },
+    "enableAuth": {
+      "type": "bool",
+      "defaultValue": false,
+      "metadata": {
+        "description": "Determines if Azure AD authentication will be enabled."
+      }
+    },
+    "keyvaultName": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "The name of the Azure Keyvault to store secrets if enabling authentication."
+      }
+    },
+    "azAdDomain": {
+      "type": "string",
+      "defaultValue": "",
+      "metadata": {
+        "description": "The Azure AD Primary domain if enabling authentication ie youraccount.onmicrosoft.com."
+      }
+    },
+    "environmentName": {
+      "type": "string",
+      "defaultValue": "dev",
+      "metadata": {
+        "description": "Environment name for resource naming."
+      }
+    },
+    "deploySourceControl": {
+      "type": "bool",
+      "defaultValue": false,
+      "metadata": {
+        "description": "Deploy source control configuration (set to false if already configured)."
+      }
+    }
+  },
+  "variables": {
+    "commonTags": {
+      "azd-env-name": "[parameters('environmentName')]"
+    }
+  },
+  "resources": [
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "monitoring",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "namePrefix": {
+            "value": "[parameters('siteName')]"
+          },
+          "environmentName": {
+            "value": "[parameters('environmentName')]"
+          },
+          "tags": {
+            "value": "[variables('commonTags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.38.33.27573",
+              "templateHash": "4182947068713190629"
+            }
+          },
+          "parameters": {
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Location for all resources."
+              }
+            },
+            "namePrefix": {
+              "type": "string",
+              "metadata": {
+                "description": "The name prefix for monitoring resources."
+              }
+            },
+            "environmentName": {
+              "type": "string",
+              "metadata": {
+                "description": "Environment name for resource naming."
+              }
+            },
+            "retentionInDays": {
+              "type": "int",
+              "defaultValue": 30,
+              "metadata": {
+                "description": "Log Analytics workspace retention in days."
+              }
+            },
+            "samplingPercentage": {
+              "type": "int",
+              "defaultValue": 5,
+              "metadata": {
+                "description": "Application Insights sampling percentage."
+              }
+            },
+            "appInsightsRetentionInDays": {
+              "type": "int",
+              "defaultValue": 90,
+              "metadata": {
+                "description": "Application Insights retention in days."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Tags to apply to all resources."
+              }
+            }
+          },
+          "variables": {
+            "logAnalyticsWorkspaceName": "[format('law-{0}-{1}', parameters('namePrefix'), parameters('environmentName'))]",
+            "applicationInsightsName": "[format('ai-{0}-{1}', parameters('namePrefix'), parameters('environmentName'))]"
+          },
+          "resources": [
+            {
+              "type": "Microsoft.OperationalInsights/workspaces",
+              "apiVersion": "2023-09-01",
+              "name": "[variables('logAnalyticsWorkspaceName')]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "properties": {
+                "sku": {
+                  "name": "PerGB2018"
+                },
+                "retentionInDays": "[parameters('retentionInDays')]",
+                "features": {
+                  "enableLogAccessUsingOnlyResourcePermissions": true
+                }
+              }
+            },
+            {
+              "type": "Microsoft.Insights/components",
+              "apiVersion": "2020-02-02",
+              "name": "[variables('applicationInsightsName')]",
+              "location": "[parameters('location')]",
+              "kind": "web",
+              "tags": "[parameters('tags')]",
+              "properties": {
+                "Application_Type": "web",
+                "WorkspaceResourceId": "[resourceId('Microsoft.OperationalInsights/workspaces', variables('logAnalyticsWorkspaceName'))]",
+                "SamplingPercentage": "[parameters('samplingPercentage')]",
+                "RetentionInDays": "[parameters('appInsightsRetentionInDays')]",
+                "DisableIpMasking": false,
+                "DisableLocalAuth": false
+              },
+              "dependsOn": [
+                "[resourceId('Microsoft.OperationalInsights/workspaces', variables('logAnalyticsWorkspaceName'))]"
+              ]
+            }
+          ],
+          "outputs": {
+            "applicationInsights": {
+              "type": "object",
+              "metadata": {
+                "description": "The Application Insights instance."
+              },
+              "value": {
+                "id": "[resourceId('Microsoft.Insights/components', variables('applicationInsightsName'))]",
+                "name": "[variables('applicationInsightsName')]",
+                "instrumentationKey": "[reference(resourceId('Microsoft.Insights/components', variables('applicationInsightsName')), '2020-02-02').InstrumentationKey]",
+                "connectionString": "[reference(resourceId('Microsoft.Insights/components', variables('applicationInsightsName')), '2020-02-02').ConnectionString]"
+              }
+            },
+            "logAnalyticsWorkspace": {
+              "type": "object",
+              "metadata": {
+                "description": "The Log Analytics workspace instance."
+              },
+              "value": {
+                "id": "[resourceId('Microsoft.OperationalInsights/workspaces', variables('logAnalyticsWorkspaceName'))]",
+                "name": "[variables('logAnalyticsWorkspaceName')]"
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "type": "Microsoft.Resources/deployments",
+      "apiVersion": "2025-04-01",
+      "name": "appservice",
+      "properties": {
+        "expressionEvaluationOptions": {
+          "scope": "inner"
+        },
+        "mode": "Incremental",
+        "parameters": {
+          "location": {
+            "value": "[parameters('location')]"
+          },
+          "siteName": {
+            "value": "[parameters('siteName')]"
+          },
+          "hostingPlanName": {
+            "value": "[parameters('hostingPlanName')]"
+          },
+          "sku": {
+            "value": "[parameters('sku')]"
+          },
+          "applicationInsightsConnectionString": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'monitoring'), '2025-04-01').outputs.applicationInsights.value.connectionString]"
+          },
+          "applicationInsightsInstrumentationKey": {
+            "value": "[reference(resourceId('Microsoft.Resources/deployments', 'monitoring'), '2025-04-01').outputs.applicationInsights.value.instrumentationKey]"
+          },
+          "repoURL": {
+            "value": "[parameters('repoURL')]"
+          },
+          "branch": {
+            "value": "[parameters('branch')]"
+          },
+          "deploySourceControl": {
+            "value": "[parameters('deploySourceControl')]"
+          },
+          "enableAuth": {
+            "value": "[parameters('enableAuth')]"
+          },
+          "keyvaultName": {
+            "value": "[parameters('keyvaultName')]"
+          },
+          "azAdDomain": {
+            "value": "[parameters('azAdDomain')]"
+          },
+          "tags": {
+            "value": "[variables('commonTags')]"
+          }
+        },
+        "template": {
+          "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+          "contentVersion": "1.0.0.0",
+          "metadata": {
+            "_generator": {
+              "name": "bicep",
+              "version": "0.38.33.27573",
+              "templateHash": "4645136516621972443"
+            }
+          },
+          "parameters": {
+            "location": {
+              "type": "string",
+              "defaultValue": "[resourceGroup().location]",
+              "metadata": {
+                "description": "Location for all resources."
+              }
+            },
+            "siteName": {
+              "type": "string",
+              "metadata": {
+                "description": "The azure web app name."
+              }
+            },
+            "hostingPlanName": {
+              "type": "string",
+              "metadata": {
+                "description": "The azure web hosting plan name."
+              }
+            },
+            "sku": {
+              "type": "string",
+              "allowedValues": [
+                "F1",
+                "D1",
+                "B1",
+                "B2",
+                "B3",
+                "S1",
+                "S2",
+                "S3",
+                "P1",
+                "P2",
+                "P3",
+                "P1V2",
+                "P2V2",
+                "P3V2",
+                "P1V3",
+                "P2V3",
+                "P3V3",
+                "EP1",
+                "EP2",
+                "EP3",
+                "I1",
+                "I2",
+                "I3",
+                "I1V2",
+                "I2V2",
+                "I3V2"
+              ],
+              "metadata": {
+                "description": "The pricing tier for the hosting plan."
+              }
+            },
+            "applicationInsightsConnectionString": {
+              "type": "string",
+              "metadata": {
+                "description": "Application Insights connection string."
+              }
+            },
+            "applicationInsightsInstrumentationKey": {
+              "type": "string",
+              "metadata": {
+                "description": "Application Insights instrumentation key."
+              }
+            },
+            "repoURL": {
+              "type": "string",
+              "metadata": {
+                "description": "The URL for the GitHub repository that contains the project to deploy."
+              }
+            },
+            "branch": {
+              "type": "string",
+              "metadata": {
+                "description": "The branch of the GitHub repository to use."
+              }
+            },
+            "deploySourceControl": {
+              "type": "bool",
+              "defaultValue": false,
+              "metadata": {
+                "description": "Deploy source control configuration (set to false if already configured)."
+              }
+            },
+            "enableAuth": {
+              "type": "bool",
+              "defaultValue": false,
+              "metadata": {
+                "description": "Determines if Azure AD authentication will be enabled."
+              }
+            },
+            "keyvaultName": {
+              "type": "string",
+              "defaultValue": "",
+              "metadata": {
+                "description": "The name of the Azure Keyvault to store secrets if enabling authentication."
+              }
+            },
+            "azAdDomain": {
+              "type": "string",
+              "defaultValue": "",
+              "metadata": {
+                "description": "The Azure AD Primary domain if enabling authentication."
+              }
+            },
+            "tags": {
+              "type": "object",
+              "defaultValue": {},
+              "metadata": {
+                "description": "Tags to apply to all resources."
+              }
+            }
+          },
+          "variables": {
+            "projectFile": "src/Blazor.EventGridViewer.ServerApp/Blazor.EventGridViewer.ServerApp.csproj",
+            "azAdTenantId": "[tenant().tenantId]",
+            "azAdInstance": "[environment().authentication.loginEndpoint]",
+            "azAdCallbackPath": "/signin-oidc",
+            "azAdSignedOutCallbackPath": "/signout-callback-oidc",
+            "azAdClientIdSecretName": "sct-egvb-azad-client-id",
+            "azAdClientId": "[if(and(parameters('enableAuth'), not(empty(parameters('keyvaultName')))), format('@Microsoft.KeyVault(SecretUri=https://{0}.vault.azure.net/secrets/{1}/)', parameters('keyvaultName'), variables('azAdClientIdSecretName')), '')]",
+            "netFrameworkVersion": "v9.0"
+          },
+          "resources": [
+            {
+              "type": "Microsoft.Web/serverfarms",
+              "apiVersion": "2023-12-01",
+              "name": "[parameters('hostingPlanName')]",
+              "location": "[parameters('location')]",
+              "tags": "[parameters('tags')]",
+              "sku": {
+                "name": "[parameters('sku')]",
+                "capacity": "[if(equals(parameters('sku'), 'F1'), 0, 1)]"
+              },
+              "properties": {
+                "reserved": false
+              }
+            },
+            {
+              "type": "Microsoft.Web/sites",
+              "apiVersion": "2023-12-01",
+              "name": "[parameters('siteName')]",
+              "location": "[parameters('location')]",
+              "tags": "[union(parameters('tags'), createObject('azd-service-name', 'web'))]",
+              "properties": {
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
+                "httpsOnly": true,
+                "siteConfig": {
+                  "webSocketsEnabled": true,
+                  "netFrameworkVersion": "[variables('netFrameworkVersion')]",
+                  "metadata": [
+                    {
+                      "name": "CURRENT_STACK",
+                      "value": "dotnet"
+                    }
+                  ],
+                  "appSettings": [
+                    {
+                      "name": "PROJECT",
+                      "value": "[variables('projectFile')]"
+                    },
+                    {
+                      "name": "ASPNETCORE_ENVIRONMENT",
+                      "value": "Production"
+                    },
+                    {
+                      "name": "APPLICATIONINSIGHTS_CONNECTION_STRING",
+                      "value": "[parameters('applicationInsightsConnectionString')]"
+                    },
+                    {
+                      "name": "APPINSIGHTS_INSTRUMENTATIONKEY",
+                      "value": "[parameters('applicationInsightsInstrumentationKey')]"
+                    },
+                    {
+                      "name": "EnableAuth",
+                      "value": "[string(parameters('enableAuth'))]"
+                    },
+                    {
+                      "name": "AzureAd:TenantId",
+                      "value": "[if(parameters('enableAuth'), variables('azAdTenantId'), '')]"
+                    },
+                    {
+                      "name": "AzureAd:Instance",
+                      "value": "[if(parameters('enableAuth'), variables('azAdInstance'), '')]"
+                    },
+                    {
+                      "name": "AzureAd:CallbackPath",
+                      "value": "[if(parameters('enableAuth'), variables('azAdCallbackPath'), '')]"
+                    },
+                    {
+                      "name": "AzureAd:SignedOutCallbackPath",
+                      "value": "[if(parameters('enableAuth'), variables('azAdSignedOutCallbackPath'), '')]"
+                    },
+                    {
+                      "name": "AzureAd:Domain",
+                      "value": "[if(parameters('enableAuth'), parameters('azAdDomain'), '')]"
+                    },
+                    {
+                      "name": "AzureAd:ClientId",
+                      "value": "[if(parameters('enableAuth'), variables('azAdClientId'), '')]"
+                    }
+                  ]
+                }
+              },
+              "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
+              ]
+            },
+            {
+              "condition": "[parameters('deploySourceControl')]",
+              "type": "Microsoft.Web/sites/sourcecontrols",
+              "apiVersion": "2023-12-01",
+              "name": "[format('{0}/{1}', parameters('siteName'), 'web')]",
+              "properties": {
+                "repoUrl": "[parameters('repoURL')]",
+                "branch": "[parameters('branch')]",
+                "isManualIntegration": true
+              },
+              "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('siteName'))]"
+              ]
+            }
+          ],
+          "outputs": {
+            "webApp": {
+              "type": "object",
+              "metadata": {
+                "description": "The Web App instance."
+              },
+              "value": {
+                "id": "[resourceId('Microsoft.Web/sites', parameters('siteName'))]",
+                "name": "[parameters('siteName')]",
+                "defaultHostName": "[reference(resourceId('Microsoft.Web/sites', parameters('siteName')), '2023-12-01').defaultHostName]",
+                "url": "[format('https://{0}', reference(resourceId('Microsoft.Web/sites', parameters('siteName')), '2023-12-01').defaultHostName)]"
+              }
+            },
+            "appServicePlan": {
+              "type": "object",
+              "metadata": {
+                "description": "The App Service Plan instance."
+              },
+              "value": {
+                "id": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]",
+                "name": "[parameters('hostingPlanName')]"
+              }
+            }
+          }
+        }
+      },
+      "dependsOn": [
+        "[resourceId('Microsoft.Resources/deployments', 'monitoring')]"
+      ]
+    }
+  ],
+  "outputs": {
+    "webAppUrl": {
+      "type": "string",
+      "metadata": {
+        "description": "The URL of the deployed web application."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'appservice'), '2025-04-01').outputs.webApp.value.url]"
+    },
+    "applicationInsightsName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the Application Insights instance."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'monitoring'), '2025-04-01').outputs.applicationInsights.value.name]"
+    },
+    "applicationInsightsInstrumentationKey": {
+      "type": "string",
+      "metadata": {
+        "description": "The instrumentation key of the Application Insights instance."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'monitoring'), '2025-04-01').outputs.applicationInsights.value.instrumentationKey]"
+    },
+    "applicationInsightsConnectionString": {
+      "type": "string",
+      "metadata": {
+        "description": "The connection string of the Application Insights instance."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'monitoring'), '2025-04-01').outputs.applicationInsights.value.connectionString]"
+    },
+    "logAnalyticsWorkspaceName": {
+      "type": "string",
+      "metadata": {
+        "description": "The name of the Log Analytics workspace."
+      },
+      "value": "[reference(resourceId('Microsoft.Resources/deployments', 'monitoring'), '2025-04-01').outputs.logAnalyticsWorkspace.value.name]"
+    },
+    "eventGridWebhookUrl": {
+      "type": "string",
+      "metadata": {
+        "description": "The EventGrid webhook endpoint URL."
+      },
+      "value": "[format('{0}/api/eventgrid', reference(resourceId('Microsoft.Resources/deployments', 'appservice'), '2025-04-01').outputs.webApp.value.url)]"
+    }
+  }
+}
