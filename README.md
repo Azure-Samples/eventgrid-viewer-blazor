@@ -3,7 +3,7 @@ page_type: sample
 languages:
 - csharp
 products:
-- aspnet
+- aspnet-core
 - azure-event-grid
 description: A modern Blazor application for viewing Azure EventGrid messages in real-time using ASP.NET Core Blazor and SignalR.
 urlFragment: eventgrid-viewer-blazor
