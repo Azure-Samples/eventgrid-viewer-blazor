@@ -28,7 +28,7 @@ jobs:
 
     steps:
     - name: 'Checkout Repository'
-      uses: actions/checkout@master
+      uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
     - name: 'Use .Net Core ${{ env.NET_CORE_VERSION }}'
       uses: actions/setup-dotnet@871f041373faaad213a635d9afb62905ec029bbb # v1.10.1
